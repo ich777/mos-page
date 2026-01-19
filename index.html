@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+
+    <title data-i18n="meta.title">MOS – Web UI für Server, Storage, Services & Virtualisierung</title>
+    <meta
+      name="description"
+      data-i18n-content="meta.description"
+      content="MOS ist eine moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Systemeinstellungen – schnell, übersichtlich und self-hosted."
+    />
+
+    <meta property="og:title" content="MOS" />
+    <meta property="og:description" data-i18n-content="meta.ogDescription" content="Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Settings." />
+    <meta property="og:type" content="website" />
+
+    <link id="favicon" rel="icon" type="image/png" href="./assets/mos-black_square.png" />
+    <link id="apple-touch-icon" rel="apple-touch-icon" href="./assets/mos-black_square.png" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./translations.js"></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skipLink">Zum Inhalt springen</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="MOS Start">
+          <span class="brand-mark" aria-hidden="true">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="./assets/mos_white.png" />
+              <img
+                class="brand-logo"
+                data-logo
+                data-light="./assets/mos-black.png"
+                data-dark="./assets/mos-white.png"
+                src="./assets/mos-black.png"
+                data-i18n-alt="brand.alt"
+                alt="MOS"
+                height="28"
+                style="height:28px;width:auto"
+                decoding="async"
+              />
+            </picture>
+            <script>
+            (function(){
+              const img = document.querySelector('[data-logo]');
+              if (!img) return;
+              const getIsDark = () =>
+                document.documentElement.classList.contains('dark') ||
+                document.documentElement.getAttribute('data-theme') === 'dark' ||
+                window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+              function update() {
+                img.src = getIsDark() ? img.dataset.dark : img.dataset.light;
+              }
+
+              update();
+
+              // react to system preference changes
+              if (window.matchMedia) {
+                const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                if (mq.addEventListener) mq.addEventListener('change', update);
+                else if (mq.addListener) mq.addListener(update);
+              }
+
+              // react to theme toggles that change <html> attributes/classes
+              const mo = new MutationObserver(update);
+              mo.observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'data-theme'] });
+            })();
+            </script>
+          </span>
+          <span class="brand-text">MOS</span>
+        </a>
+
+        <nav class="nav" data-i18n-aria-label="nav.ariaLabel" aria-label="Hauptnavigation">
+          <a class="nav-link" href="#features" data-i18n="nav.features">Features</a>
+          <a class="nav-link" href="#modules" data-i18n="nav.modules">Bereiche</a>
+          <a class="nav-link" href="#api" data-i18n="nav.api">API</a>
+          <a class="nav-link" href="#opensource" data-i18n="nav.opensource">Open Source</a>
+          <a class="nav-link" href="#usecases" data-i18n="nav.usecases">Use Cases</a>
+          <a class="nav-link" href="#security" data-i18n="nav.security">Security</a>
+          <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="btn btn-ghost"
+            type="button"
+            data-action="toggle-language"
+            data-i18n-aria-label="header.language.ariaLabel"
+            data-i18n-title="header.language.title"
+            aria-label="Sprache umschalten"
+            title="Sprache"
+          >
+            <span class="icon" aria-hidden="true">🌐</span>
+            <span class="hide-sm" data-i18n="header.language">DE</span>
+          </button>
+          <button
+            class="btn btn-ghost"
+            type="button"
+            data-action="toggle-theme"
+            data-i18n-aria-label="header.theme.ariaLabel"
+            data-i18n-title="header.theme.title"
+            aria-label="Theme umschalten"
+            title="Theme"
+          >
+            <span class="icon" aria-hidden="true">◐</span>
+            <span class="hide-sm" data-i18n="header.theme">Theme</span>
+          </button>
+          <a class="btn btn-primary" href="https://github.com/ich777/mos-docs/" target="_blank" rel="noopener" data-i18n="header.getStarted">Loslegen</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+      <section id="top" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="kicker" data-i18n="hero.kicker">Self-hosted · Schnell · Übersichtlich</p>
+            <h1 data-i18n="hero.title">Deine zentrale Web-Oberfläche für MOS.</h1>
+            <p class="lead" data-i18n="hero.lead">
+              MOS bündelt Monitoring, Storage & Shares, Benutzerverwaltung, Benachrichtigungen,
+              Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.
+            </p>
+
+            <div class="chips" aria-label="Kernpunkte">
+              <span class="chip"><strong data-i18n="hero.chip1.strong">Modernes UI</strong> · <span data-i18n="hero.chip1.text">schnell & konsistent</span></span>
+              <span class="chip"><strong data-i18n="hero.chip2.strong">Modernes API</strong> · <span data-i18n="hero.chip2.text">REST + WebSocket</span></span>
+              <span class="chip"><strong data-i18n="hero.chip3.strong">Open Source</strong> · <span data-i18n="hero.chip3.text">AGPLv3</span></span>
+            </div>
+
+            <div class="hero-actions" id="cta" style="text-align: right;margin-top: 1.5rem">
+              <a class="btn btn-secondary" href="https://github.com/ich777/mos-docs/" target="_blank" rel="noopener" data-i18n="hero.docs">Dokumentation</a>
+            </div>
+
+            <ul class="hero-bullets" aria-label="Kurzvorteile">
+              <li data-i18n="hero.bullet1">System- & Hardware-Infos (CPU/RAM/Disks/Sensoren)</li>
+              <li data-i18n="hero.bullet2">Storage, Pools & Shares – zentral verwalten</li>
+              <li data-i18n="hero.bullet3">Docker/LXC/VM – je nach aktivem Service sichtbar</li>
+              <li data-i18n="hero.bullet4">Benachrichtigungen in Echtzeit</li>
+              <li data-i18n="hero.bullet5">Webterminal & Tools für schnelle Aktionen</li>
+            </ul>
+          </div>
+
+          <div class="hero-card" aria-label="Vorschau">
+            <img
+              id="mos-screenshot-thumb"
+              data-screenshot
+              data-light="./assets/dashboard_light.png"
+              data-dark="./assets/dashboard_dark.png"
+              src="./assets/dashboard_light.png"
+              data-i18n-alt="hero.screenshot.alt"
+              alt="MOS Web UI Screenshot"
+              width="450"
+              height="300"
+              decoding="async"
+              style="cursor:pointer;max-width:100%;height:auto"
+            />
+          </div>
+
+          <!-- simple lightbox -->
+          <div
+            id="mos-lightbox"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true"
+            style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:2rem;z-index:9999"
+          >
+            <button
+              id="mos-lightbox-close"
+              data-i18n-aria-label="lightbox.close"
+              aria-label="Schließen"
+              style="position:absolute;right:1rem;top:1rem;background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer"
+            >✕</button>
+            <img
+              id="mos-screenshot-full"
+              data-screenshot
+              data-light="./assets/dashboard_light.png"
+              data-dark="./assets/dashboard_dark.png"
+              src="./assets/dashboard_light.png"
+              data-i18n-alt="lightbox.imageAlt"
+              alt="MOS Web UI Screenshot vergrößert"
+              style="max-width:100%;max-height:100%;box-shadow:0 10px 30px rgba(0,0,0,.5)"
+            />
+          </div>
+
+          <script>
+          (function(){
+            const thumb = document.getElementById('mos-screenshot-thumb');
+            const lb = document.getElementById('mos-lightbox');
+            const close = document.getElementById('mos-lightbox-close');
+            if(!thumb || !lb) return;
+            function open(){ lb.style.display='flex'; lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+            function closeLB(){ lb.style.display='none'; lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+            thumb.addEventListener('click', open);
+            close.addEventListener('click', closeLB);
+            lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLB(); });
+            document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && lb.style.display==='flex') closeLB(); });
+          })();
+          </script>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="section.features.title">Features, die im Alltag zählen</h2>
+            <p class="muted" data-i18n="section.features.subtitle">MOS ist mehr als Monitoring: es ist die Schaltzentrale für dein Setup.</p>
+          </div>
+
+          <div class="grid cards">
+            <article class="card">
+              <h3 data-i18n="features.monitoring.title">Monitoring & Status</h3>
+              <p data-i18n="features.monitoring.text">CPU, RAM, Disks, Temperaturen, Netz – kompakt und direkt erreichbar.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.storage.title">Storage, Pools & Shares</h3>
+              <p data-i18n="features.storage.text">Disks und Pools überblicken, Shares verwalten – ohne den Kontext zu verlieren.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.users.title">Benutzer & Profil</h3>
+              <p data-i18n="features.users.text">Benutzerverwaltung, Profil, Sprache und UI-Einstellungen zentral in einer Oberfläche.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.containers.title">Container & Virtualisierung</h3>
+              <p data-i18n="features.containers.text">Docker, LXC und VMs im Zugriff – abhängig davon, welche MOS-Services aktiv sind.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.terminal.title">Webterminal & Tools</h3>
+              <p data-i18n="features.terminal.text">Schnelle Checks und Aktionen direkt im Browser – ohne ständig zwischen Tools zu wechseln.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.notifications.title">Benachrichtigungen</h3>
+              <p data-i18n="features.notifications.text">Wichtige Events in Echtzeit – mit Badge und Toaster nach Priorität.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.plugins.title">Plugins & Erweiterbarkeit</h3>
+              <p data-i18n="features.plugins.text">Die Oberfläche bleibt schlank – zusätzliche Funktionen kommen modular dazu.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.settings.title">Settings & Services</h3>
+              <p data-i18n="features.settings.text">System- und Service-Einstellungen gebündelt: System, Netzwerk, Logs, Token und mehr.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="features.i18n.title">Mehrsprachig & Theme</h3>
+              <p data-i18n="features.i18n.text">UI-Texte per i18n sowie Hell/Dunkel und Farben – passend zu deinem Setup.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="modules" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="section.modules.title">Bereiche in MOS</h2>
+            <p class="muted" data-i18n="section.modules.subtitle">Ein Überblick über die wichtigsten Module, die du in der Navigation findest.</p>
+          </div>
+
+          <div class="grid cards">
+            <article class="card">
+              <h3 data-i18n="modules.dashboard.title">Dashboard</h3>
+              <p data-i18n="modules.dashboard.text">Systemübersicht, schnelle Kacheln und zentrale Statusanzeigen.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.disks.title">Disks · Pools · Shares</h3>
+              <p data-i18n="modules.disks.text">Speicher, Pools, Freigaben und related Views übersichtlich gebündelt.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.users.title">Users</h3>
+              <p data-i18n="modules.users.text">Benutzerverwaltung und Zugänge in der Web-UI.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.docker.title">Docker</h3>
+              <p data-i18n="modules.docker.text">Container-Views (Compose/Create/Change) – nur sichtbar, wenn Docker läuft.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.lxc.title">LXC</h3>
+              <p data-i18n="modules.lxc.text">Container-Verwaltung für LXC – je nach aktiviertem Service.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.vm.title">VM</h3>
+              <p data-i18n="modules.vm.text">VM-Übersichten und Service-Views – wenn die VM-Komponente aktiv ist.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.webterminal.title">Webterminal</h3>
+              <p data-i18n="modules.webterminal.text">Terminal im Browser, inklusive Popup-Variante für schnelle Aktionen.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.plugins.title">Plugins</h3>
+              <p data-i18n="modules.plugins.text">Plugin-Liste und Plugin-Views – Erweiterungen bleiben modular.</p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="modules.hub.title">MOS Hub & Remote Mounting</h3>
+              <p data-i18n="modules.hub.text">Zusatzmodule wie Hub/Remote-Mounting erscheinen, wenn sie aktiv sind.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="api" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="section.api.title">Modernes API</h2>
+            <p class="muted" data-i18n="section.api.subtitle">MOS ist nicht nur UI: es ist eine Plattform – die UI ist „nur" ein Client.</p>
+          </div>
+
+          <div class="grid three">
+            <div class="panel">
+              <h3 data-i18n="api.rest.title">REST-first</h3>
+              <p data-i18n="api.rest.text">Klare HTTP-Endpoints für Auth, Systeminfos, Services, Storage, User und vielem mehr.</p>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="api.websocket.title">Realtime per WebSocket</h3>
+              <p data-i18n="api.websocket.text">Live-Events wie Notifications funktionieren in Echtzeit – ohne Polling-Stress.</p>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="api.integration.title">Saubere Integration</h3>
+              <p data-i18n="api.integration.text">Ideal für Automationen, eigene Tools oder externe Clients – je nach Setup.</p>
+            </div>
+          </div>
+
+          <p class="muted small" style="margin-top: 0.9rem" data-i18n="api.note">
+            Hinweis: Details hängen von Version/Installation ab. Die UI nutzt API-Routen unter <code>/api/v1</code> und einen Notification-WebSocket.
+          </p>
+        </div>
+      </section>
+
+      <section id="opensource" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="section.opensource.title">Open Source</h2>
+            <p class="muted" data-i18n="section.opensource.subtitle">Transparenz, Community und Kontrolle über dein eigenes Setup.</p>
+          </div>
+
+          <div class="grid two">
+            <div class="panel">
+              <h3 data-i18n="opensource.license.title">Lizenz</h3>
+              <p>
+                <span data-i18n="opensource.license.text">MOS ist (und bleibt) Open Source und steht unter der GNU AGPLv3.</span>
+                <a href="../LICENSE" data-i18n="opensource.license.link">Lizenz anzeigen</a>
+              </p>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="opensource.contribute.title">Mitmachen</h3>
+              <p>
+                <span data-i18n="opensource.contribute.text">Feedback, Issues und Beiträge helfen, MOS besser zu machen.</span>
+                <a href="https://github.com/ich777/mos-releases" target="_blank" rel="noopener">https://github.com/ich777/mos-releases</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="usecases" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="section.usecases.title">Typische Use Cases</h2>
+            <p class="muted" data-i18n="section.usecases.subtitle">Von Homeserver bis kleines Rack – MOS passt sich an.</p>
+          </div>
+
+          <div class="grid two">
+            <div class="panel">
+              <h3 data-i18n="usecases.nas.title">Homeserver / NAS</h3>
+              <ul class="list">
+                <li data-i18n="usecases.nas.item1">Ressourcen und Speicherpools schnell prüfen</li>
+                <li data-i18n="usecases.nas.item2">Shares/Users im Blick behalten</li>
+                <li data-i18n="usecases.nas.item3">Remote Mounts und Hub-Services</li>
+              </ul>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="usecases.dev.title">Dev / Lab</h3>
+              <ul class="list">
+                <li data-i18n="usecases.dev.item1">Docker/LXC/VMs an einem Ort</li>
+                <li data-i18n="usecases.dev.item2">Webterminal für schnelle Checks</li>
+                <li data-i18n="usecases.dev.item3">Plugins für projektspezifische Aufgaben</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="security" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="section.security.title">Security & Zugriff</h2>
+            <p class="muted" data-i18n="section.security.subtitle">Ein paar Grundprinzipien für sicheren Betrieb.</p>
+          </div>
+
+          <div class="grid three">
+            <div class="panel">
+              <h3 data-i18n="security.auth.title">Auth</h3>
+              <p data-i18n="security.auth.text">Login-Flow mit Token-basiertem Zugriff (ideal hinter HTTPS / Reverse Proxy).</p>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="security.privilege.title">Least Privilege</h3>
+              <p data-i18n="security.privilege.text">Nur das freigeben, was benötigt wird; API-Zugriffe sauber segmentieren.</p>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="security.updates.title">Updates</h3>
+              <p data-i18n="security.updates.text">Regelmäßig aktualisieren und Logs/Benachrichtigungen ernst nehmen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="section.faq.title">FAQ</h2>
+            <p class="muted" data-i18n="section.faq.subtitle">Kurz beantwortet, damit du direkt starten kannst.</p>
+          </div>
+
+            <div class="faq">
+            <details>
+              <summary data-i18n="faq.what.title">Was ist MOS?</summary>
+              <p data-i18n="faq.what.text">MOS ist eine webbasierte Verwaltungsoberfläche für Server/Systeme: Monitoring, Storage, Benutzerverwaltung, Services, Container/VMs, Notifications und Tools – als Client zur MOS-API.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.services.title">Welche Dienste und Plattformen werden unterstützt?</summary>
+              <p data-i18n="faq.services.text">MOS ist service‑orientiert: Dashboard, Disks/Pools/Shares, Users, Docker, LXC, VM, Webterminal und optionale Module (z.B. Hub/Remote Mounting). Sichtbarkeit richtet sich nach aktiven Services.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.install.title">Wie installiere und betreibe ich MOS?</summary>
+              <p data-i18n="faq.install.text">Übliche Deploys laufen als Web‑UI hinter HTTPS / Reverse Proxy. Die UI selbst ist statisch; sie kommuniziert mit einer MOS‑Backend‑API (z. B. /api/v1) und einem Notification‑WebSocket.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.security.title">Wie wird Zugriff und Sicherheit gehandhabt?</summary>
+              <p data-i18n="faq.security.text">Auth erfolgt tokenbasiert; Betrieb hinter TLS und Reverse Proxy wird empfohlen. Prinzipien: Least Privilege, regelmäßige Updates und Monitoring von Logs/Notifications.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.plugins.title">Wie funktionieren Plugins und Erweiterungen?</summary>
+              <p data-i18n="faq.plugins.text">Funktionen bleiben modular: Plugins erweitern Views und API‑Funktionen. Die UI zeigt nur registrierte/aktivierte Plugins und Module an.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.updates.title">Wie bekomme ich Updates und pflege MOS?</summary>
+              <p data-i18n="faq.updates.text">Updates betreffen Backend und UI getrennt. Folge dem Projekt‑Repo für Releases.</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.opensource.title">Ist MOS Open Source?</summary>
+              <p data-i18n="faq.opensource.text">Ja, MOS ist (und bleibt) Open Source unter der GNU AGPLv3 (siehe LICENSE im Repo).</p>
+            </details>
+            <details>
+              <summary data-i18n="faq.help.title">Wo finde ich Hilfe oder möchte beitragen?</summary>
+              <p data-i18n="faq.help.text">Issues, PRs und Diskussionsbeiträge über das Projekt‑Repository; für Installationsfragen sind Readme/Docs und Community‑Kanäle die erste Anlaufstelle.</p>
+            </details>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">MOS</div>
+          <div class="muted small">© <span data-year></span></div>
+        </div>
+        <div class="footer-links">
+          <a href="#top" data-action="scroll" data-i18n="footer.scrollTop">Nach oben</a>
+          <a href="https://github.com/ich777/mos-docs/" target="_blank" rel="noopener" data-i18n="footer.docs">Docs</a>
+          <a href="../LICENSE" data-i18n="footer.license">AGPLv3</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
