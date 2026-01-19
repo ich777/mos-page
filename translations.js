@@ -9,6 +9,18 @@
 //   languages: fr: { name: 'Français', code: 'FR' }
 //   translations: fr: { 'nav.features': 'Fonctionnalités', ... }
 
+// ============================================================
+// IMPRESSUM / DATENSCHUTZ - HIER DEINE DATEN EINTRAGEN:
+// ============================================================
+const LEGAL_INFO = {
+  name: 'Christoph Hummer',      // z.B. 'Max Mustermann'
+  street: 'Santk Joahnnesstraße 40/1', // z.B. 'Musterstraße 123'
+  city: '3293 Lunz am See',             // z.B. '12345 Musterstadt'
+  country: 'Österreich',
+  email: 'admin@minenet.at',         // z.B. 'kontakt@example.de'
+};
+// ============================================================
+
 // Verfügbare Sprachen mit Anzeigenamen
 const languages = {
   de: { name: 'Deutsch', code: 'DE' },
@@ -181,6 +193,48 @@ const translations = {
     'footer.scrollTop': 'Nach oben',
     'footer.docs': 'Docs',
     'footer.license': 'AGPLv3',
+    'footer.imprint': 'Impressum',
+    'footer.privacy': 'Datenschutz',
+    
+    // Modal
+    'modal.close': 'Schließen',
+    
+    // Impressum
+    'imprint.title': 'Impressum',
+    'imprint.responsible.title': 'Angaben gemäß § 5 ECG',
+    'imprint.responsible.name': LEGAL_INFO.name,
+    'imprint.responsible.address': LEGAL_INFO.street,
+    'imprint.responsible.city': LEGAL_INFO.city,
+    'imprint.responsible.country': LEGAL_INFO.country,
+    'imprint.contact.title': 'Kontakt',
+    'imprint.contact.email': 'E-Mail: ' + LEGAL_INFO.email,
+    'imprint.disclaimer.title': 'Haftungsausschluss',
+    'imprint.disclaimer.content.title': 'Haftung für Inhalte',
+    'imprint.disclaimer.content.text': 'Die Inhalte dieser Seite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.',
+    'imprint.disclaimer.links.title': 'Haftung für Links',
+    'imprint.disclaimer.links.text': 'Diese Seite enthält Links zu externen Webseiten Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.',
+    
+    // Datenschutz
+    'privacy.title': 'Datenschutzerklärung',
+    'privacy.overview.title': '1. Datenschutz auf einen Blick',
+    'privacy.overview.text': 'Diese Website erhebt keine personenbezogenen Daten, verwendet keine Cookies und setzt keine Tracking-Tools ein.',
+    'privacy.responsible.title': '2. Verantwortlicher',
+    'privacy.responsible.name': LEGAL_INFO.name,
+    'privacy.responsible.address': LEGAL_INFO.street,
+    'privacy.responsible.city': LEGAL_INFO.city,
+    'privacy.responsible.email': 'E-Mail: ' + LEGAL_INFO.email,
+    'privacy.hosting.title': '3. Hosting',
+    'privacy.hosting.text': 'Diese Website wird selbst gehostet. Bei jedem Zugriff können technische Informationen in Server-Logfiles gespeichert werden (IP-Adresse, Zeitpunkt, aufgerufene Seite, Browser-Typ). Diese Daten dienen ausschließlich der Sicherheit und Fehleranalyse und werden nicht an Dritte weitergegeben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren Betrieb der Website).',
+    'privacy.cloudflare.title': '4. Cloudflare',
+    'privacy.cloudflare.text': 'Diese Website nutzt Cloudflare (Cloudflare, Inc.) als Sicherheits- und Performance-Dienst. Dabei werden Verbindungsdaten (z.B. IP-Adresse) über Cloudflare-Server geleitet. Cloudflare ist ein US-Unternehmen, das DSGVO-konforme Standardvertragsklauseln (SCCs) und ein Data Processing Addendum (DPA) anbietet. Weitere Informationen: https://www.cloudflare.com/de-de/privacypolicy/',
+    'privacy.cookies.title': '5. Cookies',
+    'privacy.cookies.text': 'Diese Website verwendet keine Cookies.',
+    'privacy.localStorage.title': '6. Lokale Speicherung',
+    'privacy.localStorage.text': 'Diese Website speichert ausschließlich technisch notwendige Einstellungen (Theme- und Sprachpräferenz) im lokalen Speicher Ihres Browsers (localStorage). Diese Daten werden nicht an Server übertragen und können jederzeit durch Löschen der Browser-Daten entfernt werden.',
+    'privacy.external.title': '7. Externe Links',
+    'privacy.external.text': 'Diese Website enthält Links zu externen Websites (z.B. GitHub). Beim Anklicken dieser Links verlassen Sie diese Website. Für die Datenschutzpraktiken dieser externen Seiten sind deren jeweilige Betreiber verantwortlich.',
+    'privacy.rights.title': '8. Ihre Rechte',
+    'privacy.rights.text': 'Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit. Bei Beschwerden können Sie sich an die zuständige Aufsichtsbehörde wenden.',
     
     // Skip link
     'skipLink': 'Zum Inhalt springen',
@@ -347,6 +401,48 @@ const translations = {
     'footer.scrollTop': 'Scroll to top',
     'footer.docs': 'Docs',
     'footer.license': 'AGPLv3',
+    'footer.imprint': 'Legal Notice',
+    'footer.privacy': 'Privacy Policy',
+    
+    // Modal
+    'modal.close': 'Close',
+    
+    // Imprint (Legal Notice)
+    'imprint.title': 'Legal Notice',
+    'imprint.responsible.title': 'Information according to § 5 ECG',
+    'imprint.responsible.name': LEGAL_INFO.name,
+    'imprint.responsible.address': LEGAL_INFO.street,
+    'imprint.responsible.city': LEGAL_INFO.city,
+    'imprint.responsible.country': LEGAL_INFO.country,
+    'imprint.contact.title': 'Contact',
+    'imprint.contact.email': 'Email: ' + LEGAL_INFO.email,
+    'imprint.disclaimer.title': 'Disclaimer',
+    'imprint.disclaimer.content.title': 'Liability for Content',
+    'imprint.disclaimer.content.text': 'The contents of this site have been created with the greatest care. However, no guarantee can be given for the correctness, completeness and timeliness of the content.',
+    'imprint.disclaimer.links.title': 'Liability for Links',
+    'imprint.disclaimer.links.text': 'This site contains links to external third-party websites over whose content we have no control. The respective provider is always responsible for the content of the linked pages.',
+    
+    // Privacy Policy
+    'privacy.title': 'Privacy Policy',
+    'privacy.overview.title': '1. Privacy at a Glance',
+    'privacy.overview.text': 'This website does not collect personal data, does not use cookies and does not employ tracking tools.',
+    'privacy.responsible.title': '2. Controller',
+    'privacy.responsible.name': LEGAL_INFO.name,
+    'privacy.responsible.address': LEGAL_INFO.street,
+    'privacy.responsible.city': LEGAL_INFO.city,
+    'privacy.responsible.email': 'Email: ' + LEGAL_INFO.email,
+    'privacy.hosting.title': '3. Hosting',
+    'privacy.hosting.text': 'This website is self-hosted. Technical information may be stored in server log files with each access (IP address, time, page accessed, browser type). This data is used exclusively for security and error analysis and is not shared with third parties. Processing is based on Art. 6 para. 1 lit. f GDPR (legitimate interest in secure website operation).',
+    'privacy.cloudflare.title': '4. Cloudflare',
+    'privacy.cloudflare.text': 'This website uses Cloudflare (Cloudflare, Inc.) as a security and performance service. Connection data (e.g. IP address) is routed through Cloudflare servers. Cloudflare is a US company that offers GDPR-compliant Standard Contractual Clauses (SCCs) and a Data Processing Addendum (DPA). More information: https://www.cloudflare.com/privacypolicy/',
+    'privacy.cookies.title': '5. Cookies',
+    'privacy.cookies.text': 'This website does not use cookies.',
+    'privacy.localStorage.title': '6. Local Storage',
+    'privacy.localStorage.text': 'This website only stores technically necessary settings (theme and language preference) in your browser\'s local storage (localStorage). This data is not transmitted to servers and can be removed at any time by clearing your browser data.',
+    'privacy.external.title': '7. External Links',
+    'privacy.external.text': 'This website contains links to external websites (e.g. GitHub). When clicking these links, you leave this website. The respective operators are responsible for the data protection practices of these external sites.',
+    'privacy.rights.title': '8. Your Rights',
+    'privacy.rights.text': 'You have the right to access, rectification, deletion and restriction of processing of your personal data, as well as the right to data portability. In case of complaints, you can contact the competent supervisory authority.',
     
     // Skip link
     'skipLink': 'Skip to content',

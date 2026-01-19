@@ -87,6 +87,23 @@
   // Init
   applyTheme(getPreferredTheme());
 
+  // Auf System-Theme-Änderungen reagieren (wenn keine gespeicherte Präferenz vorhanden ist)
+  if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => {
+      const stored = localStorage.getItem(storageKey);
+      // Nur auf System-Änderungen reagieren, wenn keine Präferenz gespeichert ist
+      if (!stored) {
+        applyTheme(mq.matches ? 'dark' : 'light');
+      }
+    };
+    if (mq.addEventListener) {
+      mq.addEventListener('change', handleChange);
+    } else if (mq.addListener) {
+      mq.addListener(handleChange);
+    }
+  }
+
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
@@ -134,6 +151,54 @@
       // Default: go to repo root (MOS app)
       // If you deploy this page elsewhere, change the href in index.html.
       return;
+    }
+
+    if (action === 'open-imprint') {
+      e.preventDefault();
+      openModal('imprint-modal');
+      return;
+    }
+
+    if (action === 'open-privacy') {
+      e.preventDefault();
+      openModal('privacy-modal');
+      return;
+    }
+
+    if (action === 'close-modal') {
+      e.preventDefault();
+      const modal = target.closest('.legal-modal');
+      if (modal) closeModal(modal.id);
+      return;
+    }
+  });
+
+  // Modal functions
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    
+    // Focus trap: focus first focusable element
+    const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (focusable) focusable.focus();
+  }
+
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const openModalEl = document.querySelector('.legal-modal.is-open');
+      if (openModalEl) closeModal(openModalEl.id);
     }
   });
 })();
