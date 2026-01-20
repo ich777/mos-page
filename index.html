@@ -13,7 +13,11 @@
     />
 
     <meta property="og:title" content="MOS" />
-    <meta property="og:description" data-i18n-content="meta.ogDescription" content="Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Settings." />
+    <meta
+      property="og:description"
+      data-i18n-content="meta.ogDescription"
+      content="Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Settings."
+    />
     <meta property="og:type" content="website" />
 
     <link id="favicon" rel="icon" type="image/png" href="./assets/mos-black_square.png" />
@@ -22,6 +26,23 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="./translations.js"></script>
     <script defer src="./script.js"></script>
+    <style>
+      @media (max-width: 640px) {
+        .grid.cards {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      .grid.three {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @media (max-width: 640px) {
+        .grid.three {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skipLink">Zum Inhalt springen</a>
@@ -39,7 +60,7 @@
               data-i18n-alt="brand.alt"
               alt="MOS"
               height="28"
-              style="height:28px;width:auto"
+              style="height: 28px; width: auto"
               decoding="async"
             />
           </span>
@@ -93,17 +114,28 @@
             <p class="kicker" data-i18n="hero.kicker">Self-hosted · Schnell · Übersichtlich</p>
             <h1 data-i18n="hero.title">Deine zentrale Web-Oberfläche für MOS.</h1>
             <p class="lead" data-i18n="hero.lead">
-              MOS bündelt Monitoring, Storage & Shares, Benutzerverwaltung, Benachrichtigungen,
-              Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.
+              MOS bündelt Monitoring, Storage & Shares, Benutzerverwaltung, Benachrichtigungen, Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.
             </p>
 
             <div class="chips" aria-label="Kernpunkte">
-              <span class="chip"><strong data-i18n="hero.chip1.strong">Modernes UI</strong> · <span data-i18n="hero.chip1.text">schnell & konsistent</span></span>
-              <span class="chip"><strong data-i18n="hero.chip2.strong">Modernes API</strong> · <span data-i18n="hero.chip2.text">REST + WebSocket</span></span>
-              <span class="chip"><strong data-i18n="hero.chip3.strong">Open Source</strong> · <span data-i18n="hero.chip3.text">AGPLv3</span></span>
+              <span class="chip">
+                <strong data-i18n="hero.chip1.strong">Modernes UI</strong>
+                ·
+                <span data-i18n="hero.chip1.text">schnell & konsistent</span>
+              </span>
+              <span class="chip">
+                <strong data-i18n="hero.chip2.strong">Modernes API</strong>
+                ·
+                <span data-i18n="hero.chip2.text">REST + WebSocket</span>
+              </span>
+              <span class="chip">
+                <strong data-i18n="hero.chip3.strong">Open Source</strong>
+                ·
+                <span data-i18n="hero.chip3.text">AGPLv3</span>
+              </span>
             </div>
 
-            <div class="hero-actions" id="cta" style="text-align: right;margin-top: 1.5rem">
+            <div class="hero-actions" id="cta" style="text-align: right; margin-top: 1.5rem">
               <a class="btn btn-secondary" href="https://github.com/ich777/mos-docs/" target="_blank" rel="noopener" data-i18n="hero.docs">Dokumentation</a>
             </div>
 
@@ -128,7 +160,7 @@
               width="450"
               height="300"
               decoding="async"
-              style="cursor:pointer;max-width:100%;height:auto"
+              style="cursor: pointer; max-width: 100%; height: auto"
             />
           </div>
 
@@ -138,14 +170,16 @@
             role="dialog"
             aria-modal="true"
             aria-hidden="true"
-            style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:2rem;z-index:9999"
+            style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); align-items: center; justify-content: center; padding: 2rem; z-index: 9999"
           >
             <button
               id="mos-lightbox-close"
               data-i18n-aria-label="lightbox.close"
               aria-label="Schließen"
-              style="position:absolute;right:1rem;top:1rem;background:transparent;border:none;color:#fff;font-size:1.5rem;cursor:pointer"
-            >✕</button>
+              style="position: absolute; right: 1rem; top: 1rem; background: transparent; border: none; color: #fff; font-size: 1.5rem; cursor: pointer"
+            >
+              ✕
+            </button>
             <img
               id="mos-screenshot-full"
               data-screenshot
@@ -154,23 +188,35 @@
               src="./assets/dashboard_light.png"
               data-i18n-alt="lightbox.imageAlt"
               alt="MOS Web UI Screenshot vergrößert"
-              style="max-width:100%;max-height:100%;box-shadow:0 10px 30px rgba(0,0,0,.5)"
+              style="max-width: 100%; max-height: 100%; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5)"
             />
           </div>
 
           <script>
-          (function(){
-            const thumb = document.getElementById('mos-screenshot-thumb');
-            const lb = document.getElementById('mos-lightbox');
-            const close = document.getElementById('mos-lightbox-close');
-            if(!thumb || !lb) return;
-            function open(){ lb.style.display='flex'; lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-            function closeLB(){ lb.style.display='none'; lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
-            thumb.addEventListener('click', open);
-            close.addEventListener('click', closeLB);
-            lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLB(); });
-            document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && lb.style.display==='flex') closeLB(); });
-          })();
+            (function () {
+              const thumb = document.getElementById('mos-screenshot-thumb');
+              const lb = document.getElementById('mos-lightbox');
+              const close = document.getElementById('mos-lightbox-close');
+              if (!thumb || !lb) return;
+              function open() {
+                lb.style.display = 'flex';
+                lb.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+              }
+              function closeLB() {
+                lb.style.display = 'none';
+                lb.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+              }
+              thumb.addEventListener('click', open);
+              close.addEventListener('click', closeLB);
+              lb.addEventListener('click', (e) => {
+                if (e.target === lb) closeLB();
+              });
+              document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lb.style.display === 'flex') closeLB();
+              });
+            })();
           </script>
         </div>
       </section>
@@ -278,7 +324,7 @@
             <p class="muted" data-i18n="section.api.subtitle">MOS ist nicht nur UI: es ist eine Plattform – die UI ist „nur" ein Client.</p>
           </div>
 
-          <div class="grid three">
+          <div class="grid two">
             <div class="panel">
               <h3 data-i18n="api.rest.title">REST-first</h3>
               <p data-i18n="api.rest.text">Klare HTTP-Endpoints für Auth, Systeminfos, Services, Storage, User und vielem mehr.</p>
@@ -294,7 +340,9 @@
           </div>
 
           <p class="muted small" style="margin-top: 0.9rem" data-i18n="api.note">
-            Hinweis: Details hängen von Version/Installation ab. Die UI nutzt API-Routen unter <code>/api/v1</code> und einen Notification-WebSocket.
+            Hinweis: Details hängen von Version/Installation ab. Die UI nutzt API-Routen unter
+            <code>/api/v1</code>
+            und einen Notification-WebSocket.
           </p>
         </div>
       </section>
@@ -332,7 +380,7 @@
             <p class="muted" data-i18n="section.usecases.subtitle">Von Homeserver bis kleines Rack – MOS passt sich an.</p>
           </div>
 
-          <div class="grid two">
+          <div class="grid three">
             <div class="panel">
               <h3 data-i18n="usecases.nas.title">Homeserver / NAS</h3>
               <ul class="list">
@@ -384,22 +432,31 @@
             <p class="muted" data-i18n="section.faq.subtitle">Kurz beantwortet, damit du direkt starten kannst.</p>
           </div>
 
-            <div class="faq">
+          <div class="faq">
             <details>
               <summary data-i18n="faq.what.title">Was ist MOS?</summary>
-              <p data-i18n="faq.what.text">MOS ist eine webbasierte Verwaltungsoberfläche für Server/Systeme: Monitoring, Storage, Benutzerverwaltung, Services, Container/VMs, Notifications und Tools – als Client zur MOS-API.</p>
+              <p data-i18n="faq.what.text">
+                MOS ist eine webbasierte Verwaltungsoberfläche für Server/Systeme: Monitoring, Storage, Benutzerverwaltung, Services, Container/VMs, Notifications und Tools – als Client zur MOS-API.
+              </p>
             </details>
             <details>
               <summary data-i18n="faq.services.title">Welche Dienste und Plattformen werden unterstützt?</summary>
-              <p data-i18n="faq.services.text">MOS ist service‑orientiert: Dashboard, Disks/Pools/Shares, Users, Docker, LXC, VM, Webterminal und optionale Module (z.B. Hub/Remote Mounting). Sichtbarkeit richtet sich nach aktiven Services.</p>
+              <p data-i18n="faq.services.text">
+                MOS ist service‑orientiert: Dashboard, Disks/Pools/Shares, Users, Docker, LXC, VM, Webterminal und optionale Module (z.B. Hub/Remote Mounting). Sichtbarkeit richtet sich nach aktiven
+                Services.
+              </p>
             </details>
             <details>
               <summary data-i18n="faq.install.title">Wie installiere und betreibe ich MOS?</summary>
-              <p data-i18n="faq.install.text">Übliche Deploys laufen als Web‑UI hinter HTTPS / Reverse Proxy. Die UI selbst ist statisch; sie kommuniziert mit einer MOS‑Backend‑API (z. B. /api/v1) und einem Notification‑WebSocket.</p>
+              <p data-i18n="faq.install.text">
+                Übliche Deploys laufen als Web‑UI hinter HTTPS / Reverse Proxy. Die UI selbst ist statisch; sie kommuniziert mit einer MOS‑Backend‑API (z. B. /api/v1) und einem Notification‑WebSocket.
+              </p>
             </details>
             <details>
               <summary data-i18n="faq.security.title">Wie wird Zugriff und Sicherheit gehandhabt?</summary>
-              <p data-i18n="faq.security.text">Auth erfolgt tokenbasiert; Betrieb hinter TLS und Reverse Proxy wird empfohlen. Prinzipien: Least Privilege, regelmäßige Updates und Monitoring von Logs/Notifications.</p>
+              <p data-i18n="faq.security.text">
+                Auth erfolgt tokenbasiert; Betrieb hinter TLS und Reverse Proxy wird empfohlen. Prinzipien: Least Privilege, regelmäßige Updates und Monitoring von Logs/Notifications.
+              </p>
             </details>
             <details>
               <summary data-i18n="faq.plugins.title">Wie funktionieren Plugins und Erweiterungen?</summary>
@@ -417,7 +474,7 @@
               <summary data-i18n="faq.help.title">Wo finde ich Hilfe oder möchte beitragen?</summary>
               <p data-i18n="faq.help.text">Issues, PRs und Diskussionsbeiträge über das Projekt‑Repository; für Installationsfragen sind Readme/Docs und Community‑Kanäle die erste Anlaufstelle.</p>
             </details>
-            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -426,7 +483,10 @@
       <div class="container footer-inner">
         <div>
           <div class="footer-brand">MOS</div>
-          <div class="muted small">© <span data-year></span></div>
+          <div class="muted small">
+            ©
+            <span data-year></span>
+          </div>
         </div>
         <div class="footer-links">
           <a href="#top" data-action="scroll" data-i18n="footer.scrollTop">Nach oben</a>
@@ -439,29 +499,20 @@
     </footer>
 
     <!-- Impressum Modal -->
-    <div
-      id="imprint-modal"
-      class="legal-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-      aria-labelledby="imprint-title"
-    >
+    <div id="imprint-modal" class="legal-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="imprint-title">
       <div class="legal-modal-backdrop" data-action="close-modal"></div>
       <div class="legal-modal-content">
-        <button
-          class="legal-modal-close"
-          data-action="close-modal"
-          data-i18n-aria-label="modal.close"
-          aria-label="Schließen"
-        >✕</button>
+        <button class="legal-modal-close" data-action="close-modal" data-i18n-aria-label="modal.close" aria-label="Schließen">✕</button>
         <h2 id="imprint-title" data-i18n="imprint.title">Impressum</h2>
         <div class="legal-modal-body">
           <h3 data-i18n="imprint.responsible.title">Angaben gemäß § 5 TMG</h3>
           <p>
-            <strong data-i18n="imprint.responsible.name">[Vor- und Nachname]</strong><br>
-            <span data-i18n="imprint.responsible.address">[Straße und Hausnummer]</span><br>
-            <span data-i18n="imprint.responsible.city">[PLZ und Ort]</span><br>
+            <strong data-i18n="imprint.responsible.name">[Vor- und Nachname]</strong>
+            <br />
+            <span data-i18n="imprint.responsible.address">[Straße und Hausnummer]</span>
+            <br />
+            <span data-i18n="imprint.responsible.city">[PLZ und Ort]</span>
+            <br />
             <span data-i18n="imprint.responsible.country">[Land]</span>
           </p>
 
@@ -485,65 +536,59 @@
     </div>
 
     <!-- Datenschutz Modal -->
-    <div
-      id="privacy-modal"
-      class="legal-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-hidden="true"
-      aria-labelledby="privacy-title"
-    >
+    <div id="privacy-modal" class="legal-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="privacy-title">
       <div class="legal-modal-backdrop" data-action="close-modal"></div>
       <div class="legal-modal-content">
-        <button
-          class="legal-modal-close"
-          data-action="close-modal"
-          data-i18n-aria-label="modal.close"
-          aria-label="Schließen"
-        >✕</button>
+        <button class="legal-modal-close" data-action="close-modal" data-i18n-aria-label="modal.close" aria-label="Schließen">✕</button>
         <h2 id="privacy-title" data-i18n="privacy.title">Datenschutzerklärung</h2>
         <div class="legal-modal-body">
           <h3 data-i18n="privacy.overview.title">1. Datenschutz auf einen Blick</h3>
-          <p data-i18n="privacy.overview.text">
-            Diese Website erhebt keine personenbezogenen Daten, verwendet keine Cookies und setzt keine Tracking-Tools ein.
-          </p>
+          <p data-i18n="privacy.overview.text">Diese Website erhebt keine personenbezogenen Daten, verwendet keine Cookies und setzt keine Tracking-Tools ein.</p>
 
           <h3 data-i18n="privacy.responsible.title">2. Verantwortlicher</h3>
           <p>
-            <strong data-i18n="privacy.responsible.name">[Vor- und Nachname]</strong><br>
-            <span data-i18n="privacy.responsible.address">[Straße und Hausnummer]</span><br>
-            <span data-i18n="privacy.responsible.city">[PLZ und Ort]</span><br>
+            <strong data-i18n="privacy.responsible.name">[Vor- und Nachname]</strong>
+            <br />
+            <span data-i18n="privacy.responsible.address">[Straße und Hausnummer]</span>
+            <br />
+            <span data-i18n="privacy.responsible.city">[PLZ und Ort]</span>
+            <br />
             <span data-i18n="privacy.responsible.email">E-Mail: [deine@email.de]</span>
           </p>
 
           <h3 data-i18n="privacy.hosting.title">3. Hosting</h3>
           <p data-i18n="privacy.hosting.text">
-            Diese Website wird selbst gehostet. Bei jedem Zugriff können technische Informationen in Server-Logfiles gespeichert werden (IP-Adresse, Zeitpunkt, aufgerufene Seite, Browser-Typ). Diese Daten dienen ausschließlich der Sicherheit und Fehleranalyse und werden nicht an Dritte weitergegeben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren Betrieb der Website).
+            Diese Website wird selbst gehostet. Bei jedem Zugriff können technische Informationen in Server-Logfiles gespeichert werden (IP-Adresse, Zeitpunkt, aufgerufene Seite, Browser-Typ). Diese
+            Daten dienen ausschließlich der Sicherheit und Fehleranalyse und werden nicht an Dritte weitergegeben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+            Interesse an einem sicheren Betrieb der Website).
           </p>
 
           <h3 data-i18n="privacy.cloudflare.title">4. Cloudflare</h3>
           <p data-i18n="privacy.cloudflare.text">
-            Diese Website nutzt Cloudflare (Cloudflare, Inc.) als Sicherheits- und Performance-Dienst. Dabei werden Verbindungsdaten (z.B. IP-Adresse) über Cloudflare-Server geleitet. Cloudflare ist ein US-Unternehmen, das DSGVO-konforme Standardvertragsklauseln (SCCs) und ein Data Processing Addendum (DPA) anbietet. Weitere Informationen: https://www.cloudflare.com/de-de/privacypolicy/
+            Diese Website nutzt Cloudflare (Cloudflare, Inc.) als Sicherheits- und Performance-Dienst. Dabei werden Verbindungsdaten (z.B. IP-Adresse) über Cloudflare-Server geleitet. Cloudflare ist
+            ein US-Unternehmen, das DSGVO-konforme Standardvertragsklauseln (SCCs) und ein Data Processing Addendum (DPA) anbietet. Weitere Informationen:
+            https://www.cloudflare.com/de-de/privacypolicy/
           </p>
 
           <h3 data-i18n="privacy.cookies.title">5. Cookies</h3>
-          <p data-i18n="privacy.cookies.text">
-            Diese Website verwendet keine Cookies.
-          </p>
+          <p data-i18n="privacy.cookies.text">Diese Website verwendet keine Cookies.</p>
 
           <h3 data-i18n="privacy.localStorage.title">6. Lokale Speicherung</h3>
           <p data-i18n="privacy.localStorage.text">
-            Diese Website speichert ausschließlich technisch notwendige Einstellungen (Theme- und Sprachpräferenz) im lokalen Speicher Ihres Browsers (localStorage). Diese Daten werden nicht an Server übertragen und können jederzeit durch Löschen der Browser-Daten entfernt werden.
+            Diese Website speichert ausschließlich technisch notwendige Einstellungen (Theme- und Sprachpräferenz) im lokalen Speicher Ihres Browsers (localStorage). Diese Daten werden nicht an Server
+            übertragen und können jederzeit durch Löschen der Browser-Daten entfernt werden.
           </p>
 
           <h3 data-i18n="privacy.external.title">7. Externe Links</h3>
           <p data-i18n="privacy.external.text">
-            Diese Website enthält Links zu externen Websites (z.B. GitHub). Beim Anklicken dieser Links verlassen Sie diese Website. Für die Datenschutzpraktiken dieser externen Seiten sind deren jeweilige Betreiber verantwortlich.
+            Diese Website enthält Links zu externen Websites (z.B. GitHub). Beim Anklicken dieser Links verlassen Sie diese Website. Für die Datenschutzpraktiken dieser externen Seiten sind deren
+            jeweilige Betreiber verantwortlich.
           </p>
 
           <h3 data-i18n="privacy.rights.title">8. Ihre Rechte</h3>
           <p data-i18n="privacy.rights.text">
-            Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit. Bei Beschwerden können Sie sich an die zuständige Aufsichtsbehörde wenden.
+            Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit. Bei Beschwerden können
+            Sie sich an die zuständige Aufsichtsbehörde wenden.
           </p>
         </div>
       </div>
