@@ -23,26 +23,25 @@
     <link id="favicon" rel="icon" type="image/png" href="./assets/mos-black_square.png" />
     <link id="apple-touch-icon" rel="apple-touch-icon" href="./assets/mos-black_square.png" />
 
+    <script>
+      // If the page is served via rewrite at e.g. "/mos" (without trailing slash),
+      // relative assets like "./styles.css" or "./assets/..." may resolve to "/styles.css" and break.
+      // Normalize to a trailing slash once, before loading any external assets.
+      (function () {
+        try {
+          const p = window.location.pathname;
+          const last = p.split('/').filter(Boolean).slice(-1)[0] || '';
+          const looksLikeFile = last.includes('.');
+          if (!looksLikeFile && !p.endsWith('/')) {
+            window.location.replace(p + '/' + window.location.search + window.location.hash);
+          }
+        } catch {}
+      })();
+    </script>
+
     <link rel="stylesheet" href="./styles.css" />
     <script src="./translations.js"></script>
     <script defer src="./script.js"></script>
-    <style>
-      @media (max-width: 640px) {
-        .grid.cards {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-      .grid.three {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      @media (max-width: 640px) {
-        .grid.three {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-    </style>
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="skipLink">Zum Inhalt springen</a>
@@ -109,19 +108,26 @@
 
     <main id="main" class="main" role="main">
       <section id="top" class="hero">
+
         <div class="container hero-grid">
           <div class="hero-copy">
             <p class="kicker" data-i18n="hero.kicker">Self-hosted · Schnell · Übersichtlich</p>
-            <h1 data-i18n="hero.title">MOS - Dein modernes OS für NAS & Server.</h1>
+
+            <h1 data-i18n="hero.title">
+              MOS - Dein modernes OS
+              <br class="br-sm" />
+              für NAS &amp; Server.
+            </h1>
+
             <p class="lead" data-i18n="hero.lead">
-              MOS bündelt Monitoring, Storage & Shares, Benutzerverwaltung, Benachrichtigungen, Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.
+              MOS bündelt Monitoring, Storage &amp; Shares, Benutzerverwaltung, Benachrichtigungen, Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.
             </p>
 
             <div class="chips" aria-label="Kernpunkte">
               <span class="chip">
                 <strong data-i18n="hero.chip1.strong">Modernes UI</strong>
                 ·
-                <span data-i18n="hero.chip1.text">schnell & konsistent</span>
+                <span data-i18n="hero.chip1.text">schnell &amp; konsistent</span>
               </span>
               <span class="chip">
                 <strong data-i18n="hero.chip2.strong">Modernes API</strong>
@@ -135,16 +141,16 @@
               </span>
             </div>
 
-            <div class="hero-actions" id="cta" style="text-align: right; margin-top: 1.5rem">
+            <div class="hero-actions" id="cta">
               <a class="btn btn-secondary" href="https://github.com/ich777/mos-docs/" target="_blank" rel="noopener" data-i18n="hero.docs">Dokumentation</a>
             </div>
 
             <ul class="hero-bullets" aria-label="Kurzvorteile">
-              <li data-i18n="hero.bullet1">System- & Hardware-Infos (CPU/RAM/Disks/Sensoren)</li>
-              <li data-i18n="hero.bullet2">Storage, Pools & Shares – zentral verwalten</li>
+              <li data-i18n="hero.bullet1">System- &amp; Hardware-Infos (CPU/RAM/Disks/Sensoren)</li>
+              <li data-i18n="hero.bullet2">Storage, Pools &amp; Shares – zentral verwalten</li>
               <li data-i18n="hero.bullet3">Docker/LXC/VM – je nach aktivem Service sichtbar</li>
               <li data-i18n="hero.bullet4">Benachrichtigungen in Echtzeit</li>
-              <li data-i18n="hero.bullet5">Webterminal & Tools für schnelle Aktionen</li>
+              <li data-i18n="hero.bullet5">Webterminal &amp; Tools für schnelle Aktionen</li>
             </ul>
           </div>
 

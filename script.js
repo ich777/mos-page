@@ -1,17 +1,4 @@
 (function () {
-  // If the page is served via rewrite at e.g. "/mos" (without trailing slash),
-  // relative assets like "./assets/..." may resolve to "/assets/..." and break.
-  // Normalize to a trailing slash once.
-  try {
-    const p = window.location.pathname;
-    const last = p.split('/').filter(Boolean).slice(-1)[0] || '';
-    const looksLikeFile = last.includes('.');
-    if (!looksLikeFile && !p.endsWith('/')) {
-      window.location.replace(p + '/' + window.location.search + window.location.hash);
-      return;
-    }
-  } catch {}
-
   const storageKey = 'mos-landing-theme';
 
   const base = (document.baseURI || window.location.href || '').endsWith('/')
