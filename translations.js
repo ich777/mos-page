@@ -60,7 +60,7 @@ const translations = {
     
     // Hero
     'hero.kicker': 'Self-hosted · Schnell · Übersichtlich',
-    'hero.title': 'Deine zentrale Web-Oberfläche für MOS.',
+    'hero.title': 'MOS - Dein modernes OS für NAS & Server.',
     'hero.lead': 'MOS bündelt Monitoring, Storage & Shares, Benutzerverwaltung, Benachrichtigungen, Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.',
     'hero.chip1.strong': 'Modernes UI',
     'hero.chip1.text': 'schnell & konsistent',
@@ -268,7 +268,7 @@ const translations = {
     
     // Hero
     'hero.kicker': 'Self-hosted · Fast · Clear',
-    'hero.title': 'Your central web interface for MOS.',
+    'hero.title': 'MOS - Your modern OS for NAS & Servers.',
     'hero.lead': 'MOS bundles monitoring, storage & shares, user management, notifications, web terminal, services as well as Docker/LXC/VMs – enhanced by plugins and settings.',
     'hero.chip1.strong': 'Modern UI',
     'hero.chip1.text': 'fast & consistent',
