@@ -114,13 +114,13 @@
             <p class="kicker" data-i18n="hero.kicker">Self-hosted · Schnell · Übersichtlich</p>
 
             <h1 data-i18n="hero.title">
-              MOS - Dein modernes OS
+              MOS – Leichtgewichtiges, modulares Server&nbsp;OS
               <br class="br-sm" />
-              für NAS &amp; Server.
+              für NAS, Container &amp; VMs
             </h1>
 
             <p class="lead" data-i18n="hero.lead">
-              MOS bündelt Monitoring, Storage &amp; Shares, Benutzerverwaltung, Benachrichtigungen, Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.
+              Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage &amp; Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker/LXC/VMs – modular erweiterbar.
             </p>
 
             <div class="chips" aria-label="Kernpunkte">
@@ -142,6 +142,7 @@
             </div>
 
             <div class="hero-actions" id="cta">
+              <a class="btn btn-primary" href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener" data-i18n="hero.releases">Releases</a>
               <a class="btn btn-secondary" href="https://github.com/ich777/mos-docs/" target="_blank" rel="noopener" data-i18n="hero.docs">Dokumentation</a>
             </div>
 
@@ -224,6 +225,121 @@
               });
             })();
           </script>
+        </div>
+      </section>
+
+      <!-- Highlights: kurze Übersicht der Bereiche -->
+      <section id="highlights" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="highlights.title">Was MOS abdeckt</h2>
+            <p class="muted" data-i18n="highlights.subtitle">Kernbereiche und Schnellzugriffe in die Doku.</p>
+          </div>
+
+          <div class="grid highlights">
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M15 9l-3 6-3-3 6-3z"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.quickStart.title">Quick Start</h3>
+              <p data-i18n="highlights.quickStart.text">WebUI‑Überblick, Netzwerkstart, erste Pools, erster Container, Shares.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/Installation/Create_Bootable_Media.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3v10"/>
+                  <path d="M8 9l4 4 4-4"/>
+                  <path d="M4 19h16"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.installation.title">Installation</h3>
+              <p data-i18n="highlights.installation.text">Boot‑Medium erstellen und loslegen. Changelog via Releases.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/System.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 5v2M12 17v2M5 12h2M17 12h2M7.5 7.5l1.4 1.4M15.1 15.1l1.4 1.4M16.5 7.5l-1.4 1.4M8.9 15.1l-1.4 1.4"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.system.title">System</h3>
+              <p data-i18n="highlights.system.text">Settings, Cron, Logs, Updates/Rollback, Tokens, HUB &amp; Notify.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/Create_a_Storage_Pool.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <ellipse cx="12" cy="6" rx="7" ry="3"/>
+                  <path d="M5 6v8c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/>
+                  <path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.storage.title">Storage</h3>
+              <p data-i18n="highlights.storage.text">Pools, Filesystems, SMB/NFS‑Shares, Rechte und Attribute.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/Docker_service.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="7" width="4" height="4" rx="0.5"/>
+                  <rect x="10" y="7" width="4" height="4" rx="0.5"/>
+                  <rect x="15" y="7" width="4" height="4" rx="0.5"/>
+                  <rect x="7" y="12" width="4" height="4" rx="0.5"/>
+                  <rect x="12" y="12" width="4" height="4" rx="0.5"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.docker.title">Docker</h3>
+              <p data-i18n="highlights.docker.text">Images/Container, Logs, Netzwerke, Volumes/Appdata, Compose.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/LXC_Service.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3l7 4v6l-7 4-7-4V7l7-4z"/>
+                  <path d="M12 3v6l7 4"/>
+                  <path d="M12 9L5 13"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.lxc.title">LXC</h3>
+              <p data-i18n="highlights.lxc.text">Container anlegen, Snapshots/Backups, Netzwerk &amp; Storage.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/VM_service.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="5" width="16" height="11" rx="1.5"/>
+                  <path d="M8 19h8"/>
+                  <path d="M12 16v3"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.vm.title">VM</h3>
+              <p data-i18n="highlights.vm.text">CPUs/RAM, Netzwerke, Disks, GPU/USB‑Passthrough, Snapshots.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/User_&_Access_Management/Create_Users.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="9" r="3"/>
+                  <path d="M5 19c0-3.3 3.1-6 7-6s7 2.7 7 6"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.users.title">Users</h3>
+              <p data-i18n="highlights.users.text">Benutzer erstellen, Rechte &amp; Rollen – sauber segmentiert.</p>
+            </a>
+            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/API/API_Overview.md" target="_blank" rel="noopener">
+              <div class="icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M8 6L4 12l4 6"/>
+                  <path d="M16 6l4 6-4 6"/>
+                </svg>
+              </div>
+              <h3 data-i18n="highlights.api.title">API</h3>
+              <p data-i18n="highlights.api.text">REST‑API und Realtime via WebSocket für Integrationen.</p>
+            </a>
+          </div>
+
+          <div class="cta-bar">
+            <a class="btn btn-primary" href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener" data-i18n="highlights.cta.try">Jetzt testen</a>
+            <a class="btn btn-secondary" href="https://github.com/ich777/mos-docs" target ="_blank" rel="noopener" data-i18n="highlights.cta.docs">Zur Doku</a>
+          </div>
         </div>
       </section>
 
@@ -435,50 +551,49 @@
         <div class="container">
           <div class="section-head">
             <h2 data-i18n="section.faq.title">FAQ</h2>
-            <p class="muted" data-i18n="section.faq.subtitle">Kurz beantwortet, damit du direkt starten kannst.</p>
           </div>
 
           <div class="faq">
             <details>
               <summary data-i18n="faq.what.title">Was ist MOS?</summary>
-              <p data-i18n="faq.what.text">
+              <p data-i18n-html="faq.what.text">
                 MOS ist eine webbasierte Verwaltungsoberfläche für Server/Systeme: Monitoring, Storage, Benutzerverwaltung, Services, Container/VMs, Notifications und Tools – als Client zur MOS-API.
               </p>
             </details>
             <details>
               <summary data-i18n="faq.services.title">Welche Dienste und Plattformen werden unterstützt?</summary>
-              <p data-i18n="faq.services.text">
+              <p data-i18n-html="faq.services.text">
                 MOS ist service‑orientiert: Dashboard, Disks/Pools/Shares, Users, Docker, LXC, VM, Webterminal und optionale Module (z.B. Hub/Remote Mounting). Sichtbarkeit richtet sich nach aktiven
                 Services.
               </p>
             </details>
             <details>
               <summary data-i18n="faq.install.title">Wie installiere und betreibe ich MOS?</summary>
-              <p data-i18n="faq.install.text">
+              <p data-i18n-html="faq.install.text">
                 Übliche Deploys laufen als Web‑UI hinter HTTPS / Reverse Proxy. Die UI selbst ist statisch; sie kommuniziert mit einer MOS‑Backend‑API (z. B. /api/v1) und einem Notification‑WebSocket.
               </p>
             </details>
             <details>
               <summary data-i18n="faq.security.title">Wie wird Zugriff und Sicherheit gehandhabt?</summary>
-              <p data-i18n="faq.security.text">
+              <p data-i18n-html="faq.security.text">
                 Auth erfolgt tokenbasiert; Betrieb hinter TLS und Reverse Proxy wird empfohlen. Prinzipien: Least Privilege, regelmäßige Updates und Monitoring von Logs/Notifications.
               </p>
             </details>
             <details>
               <summary data-i18n="faq.plugins.title">Wie funktionieren Plugins und Erweiterungen?</summary>
-              <p data-i18n="faq.plugins.text">Funktionen bleiben modular: Plugins erweitern Views und API‑Funktionen. Die UI zeigt nur registrierte/aktivierte Plugins und Module an.</p>
+              <p data-i18n-html="faq.plugins.text">Funktionen bleiben modular: Plugins erweitern Views und API‑Funktionen. Die UI zeigt nur registrierte/aktivierte Plugins und Module an.</p>
             </details>
             <details>
               <summary data-i18n="faq.updates.title">Wie bekomme ich Updates und pflege MOS?</summary>
-              <p data-i18n="faq.updates.text">Updates betreffen Backend und UI getrennt. Folge dem Projekt‑Repo für Releases.</p>
+              <p data-i18n-html="faq.updates.text">Updates betreffen Backend und UI getrennt. Folge dem Projekt‑Repo für Releases.</p>
             </details>
             <details>
               <summary data-i18n="faq.opensource.title">Ist MOS Open Source?</summary>
-              <p data-i18n="faq.opensource.text">Ja, MOS ist (und bleibt) Open Source unter der GNU AGPLv3 (siehe LICENSE im Repo).</p>
+              <p data-i18n-html="faq.opensource.text">Ja, MOS ist (und bleibt) Open Source unter der GNU AGPLv3 (siehe LICENSE im Repo).</p>
             </details>
             <details>
               <summary data-i18n="faq.help.title">Wo finde ich Hilfe oder möchte beitragen?</summary>
-              <p data-i18n="faq.help.text">Issues, PRs und Diskussionsbeiträge über das Projekt‑Repository; für Installationsfragen sind Readme/Docs und Community‑Kanäle die erste Anlaufstelle.</p>
+              <p data-i18n-html="faq.help.text">Issues, PRs und Diskussionsbeiträge über das Projekt‑Repository; für Installationsfragen sind Readme/Docs und Community‑Kanäle die erste Anlaufstelle.</p>
             </details>
           </div>
         </div>

@@ -61,8 +61,9 @@ const translations = {
 
     // Hero
     'hero.kicker': 'Self-hosted · Schnell · Übersichtlich',
-    'hero.title': 'MOS - Dein modernes OS für NAS & Server.',
-    'hero.lead': 'MOS bündelt Monitoring, Storage & Shares, Benutzerverwaltung, Benachrichtigungen, Webterminal, Services sowie Docker/LXC/VMs – ergänzt durch Plugins und Settings.',
+    'hero.title': 'MOS – Leichtgewichtiges, modulares Server OS für NAS, Container & VMs',
+    'hero.lead': 'Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage & Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker/LXC/VMs – modular erweiterbar.',
+    'hero.releases': 'Releases',
     'hero.chip1.strong': 'Modernes UI',
     'hero.chip1.text': 'schnell & konsistent',
     'hero.chip2.strong': 'Modernes API',
@@ -159,23 +160,23 @@ const translations = {
     // FAQ
     'faq.what.title': 'Was ist MOS?',
     'faq.what.text':
-      'MOS ist eine webbasierte Verwaltungsoberfläche für Server/Systeme: Monitoring, Storage, Benutzerverwaltung, Services, Container/VMs, Notifications und Tools – als Client zur MOS-API.',
+      'MOS ist ein leichtgewichtiges, Devuan‑basiertes Betriebssystem für Homelabs und kleine Server. Die Web‑UI ist ein Client der MOS‑API und bildet System‑Monitoring, Storage/Pools, Benutzerverwaltung, Container (Docker/LXC) und virtuelle Maschinen ab. Mehr dazu in der Doku: <a href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">WebUI‑Overview</a>.',
     'faq.services.title': 'Welche Dienste und Plattformen werden unterstützt?',
     'faq.services.text':
-      'MOS ist service‑orientiert: Dashboard, Disks/Pools/Shares, Users, Docker, LXC, VM, Webterminal und optionale Module (z.B. Hub/Remote Mounting). Sichtbarkeit richtet sich nach aktiven Services.',
+      'MOS ist service‑orientiert: verfügbar sind u. a. Dashboard, Storage/Pools/Shares, Users, Docker‑Service, LXC‑Service, VM‑Service, Webterminal sowie optionale Module wie MOS Hub und MOS Notify. Welche Funktionen sichtbar sind, hängt von den aktivierten Services ab. Details zu einzelnen Diensten findest du in der Doku (z. B. <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/Docker_service.md" target="_blank" rel="noopener">Docker</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/LXC_Service.md" target="_blank" rel="noopener">LXC</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/VM_service.md" target="_blank" rel="noopener">VM</a>).',
     'faq.install.title': 'Wie installiere und betreibe ich MOS?',
     'faq.install.text':
-      'Übliche Deploys laufen als Web‑UI hinter HTTPS / Reverse Proxy. Die UI selbst ist statisch; sie kommuniziert mit einer MOS‑Backend‑API (z. B. /api/v1) und einem Notification‑WebSocket.',
+      'Lade das offizielle Release‑Image (siehe <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Releases</a>), schreibe es auf ein Bootmedium und boote das Zielsystem. Folge dem <a href="https://github.com/ich777/mos-docs/blob/master/Installation/Create_Bootable_Media.md" target="_blank" rel="noopener">Quick‑Start / Installation</a> in der Doku: Netzwerk konfigurieren, Storage‑Pool anlegen, Services aktivieren und erste Container/VMs starten. Die Web‑UI ist statisch; das Backend/Services müssen entsprechend eingerichtet sein (API, Notify).',
     'faq.security.title': 'Wie wird Zugriff und Sicherheit gehandhabt?',
-    'faq.security.text': 'Auth erfolgt tokenbasiert; Betrieb hinter TLS und Reverse Proxy wird empfohlen. Prinzipien: Least Privilege, regelmäßige Updates und Monitoring von Logs/Notifications.',
+    'faq.security.text': 'MOS verwendet tokenbasierte Authentifizierung; für produktiven Einsatz empfiehlt sich ein Betrieb hinter TLS und einem Reverse Proxy. Folge den Prinzipien „Least Privilege“, halte System und Services aktuell und überwache Logs/Benachrichtigungen. Siehe auch: <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/System.md" target="_blank" rel="noopener">System‑Management</a>.',
     'faq.plugins.title': 'Wie funktionieren Plugins und Erweiterungen?',
-    'faq.plugins.text': 'Funktionen bleiben modular: Plugins erweitern Views und API‑Funktionen. Die UI zeigt nur registrierte/aktivierte Plugins und Module an.',
+    'faq.plugins.text': 'MOS ist modular aufgebaut: Plugins erweitern die Oberfläche und gegebenenfalls API‑Funktionen. Nur registrierte und aktivierte Plugins erscheinen in der UI; Installation/Management erfolgen über die jeweiligen Module und die Doku. Mehr dazu in der Dokumentation: <a href="https://github.com/ich777/mos-docs" target="_blank" rel="noopener">MOS Docs</a>.',
     'faq.updates.title': 'Wie bekomme ich Updates und pflege MOS?',
-    'faq.updates.text': 'Updates betreffen Backend und UI getrennt. Folge dem Projekt‑Repo für Releases.',
+    'faq.updates.text': 'Updates und Releases werden über das Projekt‑Repository / die Releases verteilt. Backend und UI können getrennt aktualisiert werden; die Doku beschreibt Update‑ und Rollback‑Verfahren. Release-Übersicht: <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Releases</a>.',
     'faq.opensource.title': 'Ist MOS Open Source?',
-    'faq.opensource.text': 'Ja, MOS ist (und bleibt) Open Source unter der GNU AGPLv3 (siehe LICENSE im Repo).',
+    'faq.opensource.text': 'Ja — MOS und die zugehörige Dokumentation sind Open Source. Siehe die LICENSE‑Datei im jeweiligen Repository für die konkrete Lizenzinformation: <a href="https://github.com/ich777/mos-frontend/blob/master/LICENSE" target="_blank" rel="noopener">LICENSE</a>.',
     'faq.help.title': 'Wo finde ich Hilfe oder möchte beitragen?',
-    'faq.help.text': 'Issues, PRs und Diskussionsbeiträge über das Projekt‑Repository; für Installationsfragen sind Readme/Docs und Community‑Kanäle die erste Anlaufstelle.',
+    'faq.help.text': 'Für Hilfe, Issues und Beiträge nutze das GitHub‑Repository (Issues/PRs) oder die Doku. Die Dokumentation enthält Quick‑Start‑Anleitungen, System‑Management‑Guides und Hinweise zu Community/Support: <a href="https://github.com/ich777/mos-docs" target="_blank" rel="noopener">MOS Docs</a>.',
 
     // Sections
     'section.features.title': 'Features, die im Alltag zählen',
@@ -192,6 +193,30 @@ const translations = {
     'section.security.subtitle': 'Ein paar Grundprinzipien für sicheren Betrieb.',
     'section.faq.title': 'FAQ',
     'section.faq.subtitle': 'Kurz beantwortet, damit du direkt starten kannst.',
+
+    // Highlights (Neue Sektion)
+    'highlights.title': 'Was MOS abdeckt',
+    'highlights.subtitle': 'Kernbereiche und Schnellzugriffe in die Doku.',
+    'highlights.quickStart.title': 'Quick Start',
+    'highlights.quickStart.text': 'WebUI‑Überblick, Netzwerkstart, erste Pools, erster Container, Shares.',
+    'highlights.installation.title': 'Installation',
+    'highlights.installation.text': 'Boot‑Medium erstellen und loslegen. Changelog via Releases.',
+    'highlights.system.title': 'System',
+    'highlights.system.text': 'Settings, Cron, Logs, Updates/Rollback, Tokens, HUB & Notify.',
+    'highlights.storage.title': 'Storage',
+    'highlights.storage.text': 'Pools, Filesystems, SMB/NFS‑Shares, Rechte und Attribute.',
+    'highlights.docker.title': 'Docker',
+    'highlights.docker.text': 'Images/Container, Logs, Netzwerke, Volumes/Appdata, Compose.',
+    'highlights.lxc.title': 'LXC',
+    'highlights.lxc.text': 'Container anlegen, Snapshots/Backups, Netzwerk & Storage.',
+    'highlights.vm.title': 'VM',
+    'highlights.vm.text': 'CPUs/RAM, Netzwerke, Disks, GPU/USB‑Passthrough, Snapshots.',
+    'highlights.users.title': 'Users',
+    'highlights.users.text': 'Benutzer erstellen, Rechte & Rollen – sauber segmentiert.',
+    'highlights.api.title': 'API',
+    'highlights.api.text': 'REST‑API und Realtime via WebSocket für Integrationen.',
+    'highlights.cta.try': 'Jetzt testen',
+    'highlights.cta.docs': 'Zur Doku',
 
     // Footer
     'footer.scrollTop': 'Nach oben',
@@ -279,8 +304,9 @@ const translations = {
 
     // Hero
     'hero.kicker': 'Self-hosted · Fast · Clear',
-    'hero.title': 'MOS - Your modern OS for NAS & Servers.',
-    'hero.lead': 'MOS bundles monitoring, storage & shares, user management, notifications, web terminal, services as well as Docker/LXC/VMs – enhanced by plugins and settings.',
+    'hero.title': 'MOS – Lightweight, modular server OS for NAS, Containers & VMs',
+    'hero.lead': 'Based on Devuan and resource‑friendly: Web UI with monitoring, storage & shares, users, networking, notifications, web terminal plus Docker/LXC/VMs – modular and extensible.',
+    'hero.releases': 'Releases',
     'hero.chip1.strong': 'Modern UI',
     'hero.chip1.text': 'fast & consistent',
     'hero.chip2.strong': 'Modern API',
@@ -377,22 +403,23 @@ const translations = {
     // FAQ
     'faq.what.title': 'What is MOS?',
     'faq.what.text':
-      'MOS is a web-based management interface for servers/systems: monitoring, storage, user management, services, containers/VMs, notifications and tools – as a client to the MOS API.',
+      'MOS is a lightweight, Devuan‑based operating system for homelabs and small servers. The web UI is a client to the MOS API and covers system monitoring, storage/pools, user management, containers (Docker/LXC) and virtual machines. See the docs: <a href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">WebUI Overview</a>.',
     'faq.services.title': 'Which services and platforms are supported?',
     'faq.services.text':
-      'MOS is service-oriented: Dashboard, Disks/Pools/Shares, Users, Docker, LXC, VM, Web Terminal and optional modules (e.g. Hub/Remote Mounting). Visibility depends on active services.',
+      'MOS is service‑oriented: available services include Dashboard, Storage/Pools/Shares, Users, Docker service, LXC service, VM service, Web terminal and optional modules like MOS Hub and MOS Notify. Visible functionality depends on which services are enabled. See specific service docs (e.g. <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/Docker_service.md" target="_blank" rel="noopener">Docker</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/LXC_Service.md" target="_blank" rel="noopener">LXC</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/VM_service.md" target="_blank" rel="noopener">VM</a>).',
     'faq.install.title': 'How do I install and operate MOS?',
-    'faq.install.text': 'Common deploys run as web UI behind HTTPS / reverse proxy. The UI itself is static; it communicates with a MOS backend API (e.g. /api/v1) and a notification WebSocket.',
+    'faq.install.text':
+      'Download the official release image (see <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Releases</a>), write it to boot media and boot the target machine. Follow the <a href="https://github.com/ich777/mos-docs/blob/master/Installation/Create_Bootable_Media.md" target="_blank" rel="noopener">Quick Start / Installation</a> in the docs to configure networking, create a storage pool, enable services and start your first containers/VMs. The web UI is static; backend/services must be set up accordingly (API, Notify).',
     'faq.security.title': 'How is access and security handled?',
-    'faq.security.text': 'Auth is token-based; operation behind TLS and reverse proxy is recommended. Principles: Least Privilege, regular updates and monitoring of logs/notifications.',
+    'faq.security.text': 'MOS uses token‑based authentication; for production use run it behind TLS and a reverse proxy. Follow least‑privilege principles, keep system/services updated and monitor logs and notifications. See: <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/System.md" target="_blank" rel="noopener">System Management</a>.',
     'faq.plugins.title': 'How do plugins and extensions work?',
-    'faq.plugins.text': 'Functions remain modular: plugins extend views and API functions. The UI only shows registered/activated plugins and modules.',
+    'faq.plugins.text': 'MOS is modular: plugins can extend the UI and, where applicable, API functionality. Only registered and enabled plugins appear in the UI; installation and management are covered in the documentation. More: <a href="https://github.com/ich777/mos-docs" target="_blank" rel="noopener">MOS Docs</a>.',
     'faq.updates.title': 'How do I get updates and maintain MOS?',
-    'faq.updates.text': 'Updates affect backend and UI separately. Follow the project repo for releases.',
+    'faq.updates.text': 'Releases and updates are published on the project repositories. Backend and UI may be updated separately; consult the documentation for update and rollback procedures. Release overview: <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Releases</a>.',
     'faq.opensource.title': 'Is MOS Open Source?',
-    'faq.opensource.text': 'Yes, MOS is (and remains) Open Source under the GNU AGPLv3 (see LICENSE in repo).',
-    'faq.help.title': 'Where can I find help or want to contribute?',
-    'faq.help.text': 'Issues, PRs and discussion contributions via the project repository; for installation questions, readme/docs and community channels are the first point of contact.',
+    'faq.opensource.text': 'Yes — MOS and its documentation are open source. See the LICENSE file in the repository for details: <a href="https://github.com/ich777/mos-frontend/blob/master/LICENSE" target="_blank" rel="noopener">LICENSE</a>.',
+    'faq.help.title': 'Where can I find help or contribute?',
+    'faq.help.text': 'Use the GitHub repository for issues and pull requests or consult the docs. The documentation contains Quick Start guides, system management instructions and pointers to community/support channels: <a href="https://github.com/ich777/mos-docs" target="_blank" rel="noopener">MOS Docs</a>.',
 
     // Sections
     'section.features.title': 'Features that matter in everyday use',
@@ -409,6 +436,30 @@ const translations = {
     'section.security.subtitle': 'A few basic principles for secure operation.',
     'section.faq.title': 'FAQ',
     'section.faq.subtitle': 'Briefly answered so you can get started right away.',
+
+    // Highlights (New section)
+    'highlights.title': 'What MOS covers',
+    'highlights.subtitle': 'Core areas and quick links to the docs.',
+    'highlights.quickStart.title': 'Quick Start',
+    'highlights.quickStart.text': 'WebUI overview, network start, first pools, first container, shares.',
+    'highlights.installation.title': 'Installation',
+    'highlights.installation.text': 'Create boot media and get started. Changelog via releases.',
+    'highlights.system.title': 'System',
+    'highlights.system.text': 'Settings, cron, logs, updates/rollback, tokens, HUB & Notify.',
+    'highlights.storage.title': 'Storage',
+    'highlights.storage.text': 'Pools, filesystems, SMB/NFS shares, permissions and attributes.',
+    'highlights.docker.title': 'Docker',
+    'highlights.docker.text': 'Images/containers, logs, networking, volumes/appdata, Compose.',
+    'highlights.lxc.title': 'LXC',
+    'highlights.lxc.text': 'Create containers, snapshots/backups, networking & storage.',
+    'highlights.vm.title': 'VM',
+    'highlights.vm.text': 'CPUs/RAM, networks, disks, GPU/USB passthrough, snapshots.',
+    'highlights.users.title': 'Users',
+    'highlights.users.text': 'Create users, permissions & roles – cleanly segmented.',
+    'highlights.api.title': 'API',
+    'highlights.api.text': 'REST API and realtime via WebSocket for integrations.',
+    'highlights.cta.try': 'Try Now',
+    'highlights.cta.docs': 'Open Docs',
 
     // Footer
     'footer.scrollTop': 'Scroll to top',
@@ -551,6 +602,13 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
     const key = el.getAttribute('data-i18n-alt');
     el.setAttribute('alt', i18n(key, lang));
+  });
+
+  // innerHTML translations (für Texte mit HTML/Links)
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-html');
+    const translation = i18n(key, lang);
+    el.innerHTML = translation;
   });
 
   // title-Tag aktualisieren
