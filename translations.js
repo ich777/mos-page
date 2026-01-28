@@ -61,7 +61,7 @@ const translations = {
 
     // Hero
     'hero.kicker': 'Self-hosted · Schnell · Übersichtlich',
-    'hero.title': 'MOS – Leichtgewichtiges, modulares Server OS für NAS, Container & VMs',
+    'hero.title': 'MOS – Modulares Betriebssystem für Server und Homelabs',
     'hero.lead': 'Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage & Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker/LXC/VMs – modular erweiterbar.',
     'hero.releases': 'Releases',
     'hero.chip1.strong': 'Modernes UI',
@@ -304,7 +304,7 @@ const translations = {
 
     // Hero
     'hero.kicker': 'Self-hosted · Fast · Clear',
-    'hero.title': 'MOS – Lightweight, modular server OS for NAS, Containers & VMs',
+    'hero.title': 'MOS - is a Modular Operation System for Servers and Homelabs',
     'hero.lead': 'Based on Devuan and resource‑friendly: Web UI with monitoring, storage & shares, users, networking, notifications, web terminal plus Docker/LXC/VMs – modular and extensible.',
     'hero.releases': 'Releases',
     'hero.chip1.strong': 'Modern UI',
