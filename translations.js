@@ -33,7 +33,7 @@ const languages = {
 const translations = {
   de: {
     // Meta
-    'meta.title': 'MOS – Web UI für Server, Storage, Services & Virtualisierung',
+    'meta.title': 'MOS – Modulares Betriebssystem für Server und Homelabs',
     'meta.description':
       'MOS ist eine moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Systemeinstellungen – schnell, übersichtlich und self-hosted.',
     'meta.ogDescription': 'Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Settings.',
@@ -277,7 +277,7 @@ const translations = {
   },
   en: {
     // Meta
-    'meta.title': 'MOS – Web UI for Servers, Storage, Services & Virtualization',
+    'meta.title': 'MOS - Modular Operating System for Servers and Homelabs',
     'meta.description': 'MOS is a modern web interface for monitoring, storage/shares, users, services, Docker/LXC/VMs, plugins, notifications and system settings – fast, clear and self-hosted.',
     'meta.ogDescription': 'Modern web interface for monitoring, storage/shares, users, services, Docker/LXC/VMs, plugins, notifications and settings.',
 
@@ -304,7 +304,7 @@ const translations = {
 
     // Hero
     'hero.kicker': 'Self-hosted · Fast · Clear',
-    'hero.title': 'MOS - is a Modular Operation System for Servers and Homelabs',
+    'hero.title': 'MOS - Modular Operating System for Servers and Homelabs',
     'hero.lead': 'Based on Devuan and resource‑friendly: Web UI with monitoring, storage & shares, users, networking, notifications, web terminal plus Docker/LXC/VMs – modular and extensible.',
     'hero.releases': 'Releases',
     'hero.chip1.strong': 'Modern UI',
