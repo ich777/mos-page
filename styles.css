@@ -77,6 +77,120 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Social side tabs */
+.social-tabs {
+  position: fixed;
+  top: 50%;
+  right: max(0.75rem, env(safe-area-inset-right));
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  z-index: 30;
+}
+
+.social-tab {
+  width: 3.1rem;
+  height: 3.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 84%, transparent);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  backdrop-filter: blur(10px) saturate(120%);
+  box-shadow: var(--elev-2);
+  overflow: hidden;
+  text-decoration: none;
+  transition:
+    width 180ms ease,
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.social-tab:hover,
+.social-tab:focus-visible {
+  width: 11.25rem;
+  transform: translateX(-8px);
+  background: color-mix(in srgb, var(--surface2) 92%, transparent);
+  box-shadow: var(--elev-3);
+  text-decoration: none;
+}
+
+.social-tab:active {
+  transform: translateX(-6px) translateY(1px);
+}
+
+.social-tab__icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.social-tab__icon > i {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.social-tab__label {
+  color: var(--text);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 140ms ease, transform 180ms ease;
+}
+
+.social-tab:hover .social-tab__label,
+.social-tab:focus-visible .social-tab__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.social-tab--discord .social-tab__icon {
+  background: #5865f2;
+}
+
+.social-tab--reddit .social-tab__icon {
+  background: #ff4500;
+}
+
+.social-tab--x .social-tab__icon {
+  background: #0b0b0b;
+}
+
+[data-theme='light'] .social-tab--x .social-tab__icon {
+  background: #111;
+}
+
+@media (max-width: 760px) {
+  .social-tabs {
+    top: auto;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    transform: none;
+  }
+
+  .social-tab:hover,
+  .social-tab:focus-visible {
+    width: 10.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-tab,
+  .social-tab__label {
+    transition: none;
+  }
+}
+
 .container {
   width: min(100% - 2rem, var(--container));
   margin-inline: auto;

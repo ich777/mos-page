@@ -274,6 +274,18 @@ const translations = {
 
     // Skip link
     skipLink: 'Zum Inhalt springen',
+
+    // Social
+    'social.ariaLabel': 'Social Links',
+    'social.discord.label': 'Discord',
+    'social.discord.title': 'Discord öffnen',
+    'social.discord.ariaLabel': 'Discord öffnen (neuer Tab)',
+    'social.reddit.label': 'Reddit',
+    'social.reddit.title': 'Reddit öffnen',
+    'social.reddit.ariaLabel': 'Reddit öffnen (neuer Tab)',
+    'social.x.label': 'X',
+    'social.x.title': 'X öffnen',
+    'social.x.ariaLabel': 'X öffnen (neuer Tab)',
   },
   en: {
     // Meta
@@ -517,6 +529,18 @@ const translations = {
 
     // Skip link
     skipLink: 'Skip to content',
+
+    // Social
+    'social.ariaLabel': 'Social links',
+    'social.discord.label': 'Discord',
+    'social.discord.title': 'Open Discord',
+    'social.discord.ariaLabel': 'Open Discord (new tab)',
+    'social.reddit.label': 'Reddit',
+    'social.reddit.title': 'Open Reddit',
+    'social.reddit.ariaLabel': 'Open Reddit (new tab)',
+    'social.x.label': 'X',
+    'social.x.title': 'Open X',
+    'social.x.ariaLabel': 'Open X (new tab)',
   },
 };
 
