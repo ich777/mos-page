@@ -17,7 +17,7 @@ const LEGAL_INFO = {
   street: 'Santk Joahnnesstraße 40/1', // z.B. 'Musterstraße 123'
   city: '3293 Lunz am See', // z.B. '12345 Musterstadt'
   country: 'Österreich',
-  email: 'admin@minenet.at', // z.B. 'kontakt@example.de'
+  email: 'admin@mos-official.net', // z.B. 'kontakt@example.de'
 };
 // ============================================================
 
