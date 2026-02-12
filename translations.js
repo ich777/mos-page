@@ -35,8 +35,8 @@ const translations = {
     // Meta
     'meta.title': 'MOS – Modulares Betriebssystem für Server und Homelabs',
     'meta.description':
-      'MOS ist eine moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Systemeinstellungen – schnell, übersichtlich und self-hosted.',
-    'meta.ogDescription': 'Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Settings.',
+      'MOS ist eine moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker, LXC, VMs, Plugins, Benachrichtigungen und Systemeinstellungen – schnell, übersichtlich und self-hosted.',
+    'meta.ogDescription': 'Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker, LXC, VMs, Plugins, Benachrichtigungen und Settings.',
 
     // Brand
     'brand.alt': 'MOS',
@@ -44,7 +44,6 @@ const translations = {
     // Navigation
     'nav.ariaLabel': 'Hauptnavigation',
     'nav.features': 'Features',
-    'nav.modules': 'Bereiche',
     'nav.api': 'API',
     'nav.opensource': 'Open Source',
     'nav.usecases': 'Use Cases',
@@ -62,7 +61,7 @@ const translations = {
     // Hero
     'hero.kicker': 'Self-hosted · Schnell · Übersichtlich',
     'hero.title': 'MOS – Modulares Betriebssystem für Server und Homelabs',
-    'hero.lead': 'Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage & Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker/LXC/VMs – modular erweiterbar.',
+    'hero.lead': 'Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage & Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker, LXC, VMs – modular erweiterbar.',
     'hero.download': 'Download',
     'hero.chip1.strong': 'Modernes UI',
     'hero.chip1.text': 'schnell & konsistent',
@@ -74,7 +73,7 @@ const translations = {
     'hero.docs': 'Dokumentation',
     'hero.bullet1': 'System- & Hardware-Infos (CPU/RAM/Disks/Sensoren)',
     'hero.bullet2': 'Storage, Pools & Shares – zentral verwalten',
-    'hero.bullet3': 'Docker/LXC/VM – je nach aktivem Service sichtbar',
+    'hero.bullet3': 'Docker, LXC, VMs – separat aktivierbar',
     'hero.bullet4': 'Benachrichtigungen in Echtzeit',
     'hero.bullet5': 'Webterminal & Tools für schnelle Aktionen',
     'hero.screenshot.alt': 'MOS Web UI Screenshot',
@@ -103,26 +102,6 @@ const translations = {
     'features.i18n.title': 'Mehrsprachig & Theme',
     'features.i18n.text': 'UI-Texte per i18n sowie Hell/Dunkel und Farben – passend zu deinem Setup.',
 
-    // Modules
-    'modules.dashboard.title': 'Dashboard',
-    'modules.dashboard.text': 'Systemübersicht, schnelle Kacheln und zentrale Statusanzeigen.',
-    'modules.disks.title': 'Disks · Pools · Shares',
-    'modules.disks.text': 'Speicher, Pools, Freigaben und related Views übersichtlich gebündelt.',
-    'modules.users.title': 'Users',
-    'modules.users.text': 'Benutzerverwaltung und Zugänge in der Web-UI.',
-    'modules.docker.title': 'Docker',
-    'modules.docker.text': 'Container-Views (Compose/Create/Change) – nur sichtbar, wenn Docker läuft.',
-    'modules.lxc.title': 'LXC',
-    'modules.lxc.text': 'Container-Verwaltung für LXC – je nach aktiviertem Service.',
-    'modules.vm.title': 'VM',
-    'modules.vm.text': 'VM-Übersichten und Service-Views – wenn die VM-Komponente aktiv ist.',
-    'modules.webterminal.title': 'Webterminal',
-    'modules.webterminal.text': 'Terminal im Browser, inklusive Popup-Variante für schnelle Aktionen.',
-    'modules.plugins.title': 'Plugins',
-    'modules.plugins.text': 'Plugin-Liste und Plugin-Views – Erweiterungen bleiben modular.',
-    'modules.hub.title': 'MOS Hub & Remote Mounting',
-    'modules.hub.text': 'Zusatzmodule wie Hub/Remote-Mounting erscheinen, wenn sie aktiv sind.',
-
     // API
     'api.rest.title': 'REST-first',
     'api.rest.text': 'Klare HTTP-Endpoints für Auth, Systeminfos, Services, Storage, User und vielem mehr.',
@@ -145,7 +124,7 @@ const translations = {
     'usecases.nas.item2': 'Shares/Users im Blick behalten',
     'usecases.nas.item3': 'Remote Mounts und Hub-Services',
     'usecases.dev.title': 'Dev / Lab',
-    'usecases.dev.item1': 'Docker/LXC/VMs an einem Ort',
+    'usecases.dev.item1': 'Docker, LXC, VMs an einem Ort',
     'usecases.dev.item2': 'Webterminal für schnelle Checks',
     'usecases.dev.item3': 'Plugins für projektspezifische Aufgaben',
 
@@ -160,7 +139,7 @@ const translations = {
     // FAQ
     'faq.what.title': 'Was ist MOS?',
     'faq.what.text':
-      'MOS ist ein leichtgewichtiges, Devuan‑basiertes Betriebssystem für Homelabs und kleine Server. Die Web‑UI ist ein Client der MOS‑API und bildet System‑Monitoring, Storage/Pools, Benutzerverwaltung, Container (Docker/LXC) und virtuelle Maschinen ab. Mehr dazu in der Doku: <a href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">WebUI‑Overview</a>.',
+      'MOS ist ein leichtgewichtiges, Devuan‑basiertes Betriebssystem für Homelabs und kleine Server. Die Web‑UI ist ein Client der MOS‑API und bildet System‑Monitoring, Storage/Pools, Benutzerverwaltung, Container (Docker, LXC) und virtuelle Maschinen ab. Mehr dazu in der Doku: <a href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">WebUI‑Overview</a>.',
     'faq.services.title': 'Welche Dienste und Plattformen werden unterstützt?',
     'faq.services.text':
       'MOS ist service‑orientiert: verfügbar sind u. a. Dashboard, Storage/Pools/Shares, Users, Docker‑Service, LXC‑Service, VM‑Service, Webterminal sowie optionale Module wie MOS Hub und MOS Notify. Welche Funktionen sichtbar sind, hängt von den aktivierten Services ab. Details zu einzelnen Diensten findest du in der Doku (z. B. <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/Docker_service.md" target="_blank" rel="noopener">Docker</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/LXC_Service.md" target="_blank" rel="noopener">LXC</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/VM_service.md" target="_blank" rel="noopener">VM</a>).',
@@ -181,10 +160,7 @@ const translations = {
     // Sections
     'section.features.title': 'Features, die im Alltag zählen',
     'section.features.subtitle': 'MOS ist mehr als Monitoring: es ist die Schaltzentrale für dein Setup.',
-    'section.modules.title': 'Bereiche in MOS',
-    'section.modules.subtitle': 'Ein Überblick über die wichtigsten Module, die du in der Navigation findest.',
     'section.api.title': 'Modernes API',
-    'section.api.subtitle': 'MOS ist nicht nur UI: es ist eine Plattform – die UI ist „nur" ein Client.',
     'section.opensource.title': 'Open Source',
     'section.opensource.subtitle': 'Transparenz, Community und Kontrolle über dein eigenes Setup.',
     'section.usecases.title': 'Typische Use Cases',
@@ -290,8 +266,8 @@ const translations = {
   en: {
     // Meta
     'meta.title': 'MOS - Modular Operating System for Servers and Homelabs',
-    'meta.description': 'MOS is a modern web interface for monitoring, storage/shares, users, services, Docker/LXC/VMs, plugins, notifications and system settings – fast, clear and self-hosted.',
-    'meta.ogDescription': 'Modern web interface for monitoring, storage/shares, users, services, Docker/LXC/VMs, plugins, notifications and settings.',
+    'meta.description': 'MOS is a modern web interface for monitoring, storage/shares, users, services, Docker, LXC, VMs, plugins, notifications and system settings – fast, clear and self-hosted.',
+    'meta.ogDescription': 'Modern web interface for monitoring, storage/shares, users, services, Docker, LXC, VMs, plugins, notifications and settings.',
 
     // Brand
     'brand.alt': 'MOS',
@@ -299,7 +275,6 @@ const translations = {
     // Navigation
     'nav.ariaLabel': 'Main navigation',
     'nav.features': 'Features',
-    'nav.modules': 'Modules',
     'nav.api': 'API',
     'nav.opensource': 'Open Source',
     'nav.usecases': 'Use Cases',
@@ -317,7 +292,7 @@ const translations = {
     // Hero
     'hero.kicker': 'Self-hosted · Fast · Clear',
     'hero.title': 'MOS - Modular Operating System for Servers and Homelabs',
-    'hero.lead': 'Based on Devuan and resource‑friendly: Web UI with monitoring, storage & shares, users, networking, notifications, web terminal plus Docker/LXC/VMs – modular and extensible.',
+    'hero.lead': 'Based on Devuan and resource‑friendly: Web UI with monitoring, storage & shares, users, networking, notifications, web terminal plus Docker, LXC, VMs – modular and extensible.',
     'hero.download': 'Download',
     'hero.chip1.strong': 'Modern UI',
     'hero.chip1.text': 'fast & consistent',
@@ -329,7 +304,7 @@ const translations = {
     'hero.docs': 'Documentation',
     'hero.bullet1': 'System & hardware info (CPU/RAM/Disks/Sensors)',
     'hero.bullet2': 'Storage, pools & shares – manage centrally',
-    'hero.bullet3': 'Docker/LXC/VM – visible depending on active service',
+    'hero.bullet3': 'Docker, LXC, VMs – separately activatable',
     'hero.bullet4': 'Real-time notifications',
     'hero.bullet5': 'Web terminal & tools for quick actions',
     'hero.screenshot.alt': 'MOS Web UI Screenshot',
@@ -358,26 +333,6 @@ const translations = {
     'features.i18n.title': 'Multilingual & Theme',
     'features.i18n.text': 'UI texts via i18n as well as light/dark and colors – matching your setup.',
 
-    // Modules
-    'modules.dashboard.title': 'Dashboard',
-    'modules.dashboard.text': 'System overview, quick tiles and central status displays.',
-    'modules.disks.title': 'Disks · Pools · Shares',
-    'modules.disks.text': 'Storage, pools, shares and related views bundled clearly.',
-    'modules.users.title': 'Users',
-    'modules.users.text': 'User management and access in the web UI.',
-    'modules.docker.title': 'Docker',
-    'modules.docker.text': 'Container views (Compose/Create/Change) – only visible when Docker is running.',
-    'modules.lxc.title': 'LXC',
-    'modules.lxc.text': 'Container management for LXC – depending on activated service.',
-    'modules.vm.title': 'VM',
-    'modules.vm.text': 'VM overviews and service views – when the VM component is active.',
-    'modules.webterminal.title': 'Web Terminal',
-    'modules.webterminal.text': 'Terminal in the browser, including popup variant for quick actions.',
-    'modules.plugins.title': 'Plugins',
-    'modules.plugins.text': 'Plugin list and plugin views – extensions remain modular.',
-    'modules.hub.title': 'MOS Hub & Remote Mounting',
-    'modules.hub.text': 'Additional modules like Hub/Remote Mounting appear when they are active.',
-
     // API
     'api.rest.title': 'REST-first',
     'api.rest.text': 'Clear HTTP endpoints for auth, system info, services, storage, users and much more.',
@@ -400,7 +355,7 @@ const translations = {
     'usecases.nas.item2': 'Keep shares/users in view',
     'usecases.nas.item3': 'Remote mounts and hub services',
     'usecases.dev.title': 'Dev / Lab',
-    'usecases.dev.item1': 'Docker/LXC/VMs in one place',
+    'usecases.dev.item1': 'Docker, LXC, VMs in one place',
     'usecases.dev.item2': 'Web terminal for quick checks',
     'usecases.dev.item3': 'Plugins for project-specific tasks',
 
@@ -414,14 +369,11 @@ const translations = {
 
     // FAQ
     'faq.what.title': 'What is MOS?',
-    'faq.what.text':
-      'MOS is a lightweight, Devuan‑based operating system for homelabs and small servers. The web UI is a client to the MOS API and covers system monitoring, storage/pools, user management, containers (Docker/LXC) and virtual machines. See the docs: <a href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">WebUI Overview</a>.',
+    'faq.what.text': 'MOS is a lightweight, Devuan‑based operating system for homelabs and small servers. The web UI is a client to the MOS API and covers system monitoring, storage/pools, user management, containers (Docker, LXC) and virtual machines. See the docs: <a href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">WebUI Overview</a>.',
     'faq.services.title': 'Which services and platforms are supported?',
-    'faq.services.text':
-      'MOS is service‑oriented: available services include Dashboard, Storage/Pools/Shares, Users, Docker service, LXC service, VM service, Web terminal and optional modules like MOS Hub and MOS Notify. Visible functionality depends on which services are enabled. See specific service docs (e.g. <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/Docker_service.md" target="_blank" rel="noopener">Docker</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/LXC_Service.md" target="_blank" rel="noopener">LXC</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/VM_service.md" target="_blank" rel="noopener">VM</a>).',
+    'faq.services.text': 'MOS is service‑oriented: available services include Dashboard, Storage/Pools/Shares, Users, Docker service, LXC service, VM service, Web terminal and optional modules like MOS Hub and MOS Notify. Visible functionality depends on which services are enabled. See specific service docs (e.g. <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/Docker_service.md" target="_blank" rel="noopener">Docker</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/LXC_Service.md" target="_blank" rel="noopener">LXC</a>, <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/VM_service.md" target="_blank" rel="noopener">VM</a>).',
     'faq.install.title': 'How do I install and operate MOS?',
-    'faq.install.text':
-      'Download the official release image (see <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Releases</a>), write it to boot media and boot the target machine. Follow the <a href="https://github.com/ich777/mos-docs/blob/master/Installation/Create_Bootable_Media.md" target="_blank" rel="noopener">Quick Start / Installation</a> in the docs to configure networking, create a storage pool, enable services and start your first containers/VMs. The web UI is static; backend/services must be set up accordingly (API, Notify).',
+    'faq.install.text': 'Download the official release image (see <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Releases</a>), write it to boot media and boot the target machine. Follow the <a href="https://github.com/ich777/mos-docs/blob/master/Installation/Create_Bootable_Media.md" target="_blank" rel="noopener">Quick Start / Installation</a> in the docs to configure networking, create a storage pool, enable services and start your first containers/VMs. The web UI is static; backend/services must be set up accordingly (API, Notify).',
     'faq.security.title': 'How is access and security handled?',
     'faq.security.text': 'MOS uses token‑based authentication; for production use run it behind TLS and a reverse proxy. Follow least‑privilege principles, keep system/services updated and monitor logs and notifications. See: <a href="https://github.com/ich777/mos-docs/blob/master/System_Management/System.md" target="_blank" rel="noopener">System Management</a>.',
     'faq.plugins.title': 'How do plugins and extensions work?',
@@ -436,10 +388,7 @@ const translations = {
     // Sections
     'section.features.title': 'Features that matter in everyday use',
     'section.features.subtitle': "MOS is more than monitoring: it's the control center for your setup.",
-    'section.modules.title': 'Areas in MOS',
-    'section.modules.subtitle': "An overview of the most important modules you'll find in the navigation.",
     'section.api.title': 'Modern API',
-    'section.api.subtitle': 'MOS is not just UI: it\'s a platform – the UI is "just" a client.',
     'section.opensource.title': 'Open Source',
     'section.opensource.subtitle': 'Transparency, community and control over your own setup.',
     'section.usecases.title': 'Typical Use Cases',

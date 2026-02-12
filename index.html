@@ -9,14 +9,14 @@
     <meta
       name="description"
       data-i18n-content="meta.description"
-      content="MOS ist eine moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Systemeinstellungen – schnell, übersichtlich und self-hosted."
+      content="MOS ist eine moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker, LXC, VMs, Plugins, Benachrichtigungen und Systemeinstellungen – schnell, übersichtlich und self-hosted."
     />
 
     <meta property="og:title" content="MOS" />
     <meta
       property="og:description"
       data-i18n-content="meta.ogDescription"
-      content="Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker/LXC/VMs, Plugins, Benachrichtigungen und Settings."
+      content="Moderne Web-Oberfläche für Monitoring, Storage/Shares, Benutzer, Services, Docker, LXC, VMs, Plugins, Benachrichtigungen und Settings."
     />
     <meta property="og:type" content="website" />
 
@@ -66,7 +66,6 @@
 
         <nav class="nav" data-i18n-aria-label="nav.ariaLabel" aria-label="Hauptnavigation">
           <a class="nav-link" href="#features" data-i18n="nav.features">Features</a>
-          <a class="nav-link" href="#modules" data-i18n="nav.modules">Bereiche</a>
           <a class="nav-link" href="#api" data-i18n="nav.api">API</a>
           <a class="nav-link" href="#opensource" data-i18n="nav.opensource">Open Source</a>
           <a class="nav-link" href="#usecases" data-i18n="nav.usecases">Use Cases</a>
@@ -157,7 +156,7 @@
             <h1 data-i18n="hero.title">MOS – Modulares Betriebssystem für Server und Homelabs</h1>
 
             <p class="lead" data-i18n="hero.lead">
-              Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage &amp; Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker/LXC/VMs – modular erweiterbar.
+              Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage &amp; Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker, LXC, VMs – modular erweiterbar.
             </p>
 
             <div class="chips" aria-label="Kernpunkte">
@@ -186,7 +185,7 @@
             <ul class="hero-bullets" aria-label="Kurzvorteile">
               <li data-i18n="hero.bullet1">System- &amp; Hardware-Infos (CPU/RAM/Disks/Sensoren)</li>
               <li data-i18n="hero.bullet2">Storage, Pools &amp; Shares – zentral verwalten</li>
-              <li data-i18n="hero.bullet3">Docker/LXC/VM – je nach aktivem Service sichtbar</li>
+              <li data-i18n="hero.bullet3">Docker, LXC, VMs – separat aktivierbar</li>
               <li data-i18n="hero.bullet4">Benachrichtigungen in Echtzeit</li>
               <li data-i18n="hero.bullet5">Webterminal &amp; Tools für schnelle Aktionen</li>
             </ul>
@@ -428,59 +427,10 @@
         </div>
       </section>
 
-      <section id="modules" class="section section-alt">
-        <div class="container">
-          <div class="section-head">
-            <h2 data-i18n="section.modules.title">Bereiche in MOS</h2>
-            <p class="muted" data-i18n="section.modules.subtitle">Ein Überblick über die wichtigsten Module, die du in der Navigation findest.</p>
-          </div>
-
-          <div class="grid cards">
-            <article class="card">
-              <h3 data-i18n="modules.dashboard.title">Dashboard</h3>
-              <p data-i18n="modules.dashboard.text">Systemübersicht, schnelle Kacheln und zentrale Statusanzeigen.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.disks.title">Disks · Pools · Shares</h3>
-              <p data-i18n="modules.disks.text">Speicher, Pools, Freigaben und related Views übersichtlich gebündelt.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.users.title">Users</h3>
-              <p data-i18n="modules.users.text">Benutzerverwaltung und Zugänge in der Web-UI.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.docker.title">Docker</h3>
-              <p data-i18n="modules.docker.text">Container-Views (Compose/Create/Change) – nur sichtbar, wenn Docker läuft.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.lxc.title">LXC</h3>
-              <p data-i18n="modules.lxc.text">Container-Verwaltung für LXC – je nach aktiviertem Service.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.vm.title">VM</h3>
-              <p data-i18n="modules.vm.text">VM-Übersichten und Service-Views – wenn die VM-Komponente aktiv ist.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.webterminal.title">Webterminal</h3>
-              <p data-i18n="modules.webterminal.text">Terminal im Browser, inklusive Popup-Variante für schnelle Aktionen.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.plugins.title">Plugins</h3>
-              <p data-i18n="modules.plugins.text">Plugin-Liste und Plugin-Views – Erweiterungen bleiben modular.</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="modules.hub.title">MOS Hub & Remote Mounting</h3>
-              <p data-i18n="modules.hub.text">Zusatzmodule wie Hub/Remote-Mounting erscheinen, wenn sie aktiv sind.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section id="api" class="section">
         <div class="container">
           <div class="section-head">
             <h2 data-i18n="section.api.title">Modernes API</h2>
-            <p class="muted" data-i18n="section.api.subtitle">MOS ist nicht nur UI: es ist eine Plattform – die UI ist „nur" ein Client.</p>
           </div>
 
           <div class="grid two">
@@ -551,7 +501,7 @@
             <div class="panel">
               <h3 data-i18n="usecases.dev.title">Dev / Lab</h3>
               <ul class="list">
-                <li data-i18n="usecases.dev.item1">Docker/LXC/VMs an einem Ort</li>
+                <li data-i18n="usecases.dev.item1">Docker, LXC, VMs an einem Ort</li>
                 <li data-i18n="usecases.dev.item2">Webterminal für schnelle Checks</li>
                 <li data-i18n="usecases.dev.item3">Plugins für projektspezifische Aufgaben</li>
               </ul>
