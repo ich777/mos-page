@@ -64,7 +64,7 @@ const translations = {
     'hero.lead': 'Devuan‑basiert und ressourcenschonend: Web‑UI mit Monitoring, Storage & Shares, Users, Netzwerk, Benachrichtigungen, Webterminal sowie Docker, LXC, VMs – modular erweiterbar.',
     'hero.download': 'Download',
     'hero.chip1.strong': 'Modernes UI',
-    'hero.chip1.text': 'schnell & konsistent',
+    'hero.chip1.text': 'Vue + Vuetify',
     'hero.chip2.strong': 'Modernes API',
     'hero.chip2.text': 'REST + WebSocket',
     'hero.chip3.strong': 'Open Source',
@@ -159,7 +159,6 @@ const translations = {
 
     // Sections
     'section.features.title': 'Features, die im Alltag zählen',
-    'section.features.subtitle': 'MOS ist mehr als Monitoring: es ist die Schaltzentrale für dein Setup.',
     'section.api.title': 'Modernes API',
     'section.opensource.title': 'Open Source',
     'section.opensource.subtitle': 'Transparenz, Community und Kontrolle über dein eigenes Setup.',
@@ -295,7 +294,7 @@ const translations = {
     'hero.lead': 'Based on Devuan and resource‑friendly: Web UI with monitoring, storage & shares, users, networking, notifications, web terminal plus Docker, LXC, VMs – modular and extensible.',
     'hero.download': 'Download',
     'hero.chip1.strong': 'Modern UI',
-    'hero.chip1.text': 'fast & consistent',
+    'hero.chip1.text': 'Vue + Vuetify',
     'hero.chip2.strong': 'Modern API',
     'hero.chip2.text': 'REST + WebSocket',
     'hero.chip3.strong': 'Open Source',
@@ -387,7 +386,6 @@ const translations = {
 
     // Sections
     'section.features.title': 'Features that matter in everyday use',
-    'section.features.subtitle': "MOS is more than monitoring: it's the control center for your setup.",
     'section.api.title': 'Modern API',
     'section.opensource.title': 'Open Source',
     'section.opensource.subtitle': 'Transparency, community and control over your own setup.',
