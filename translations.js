@@ -71,11 +71,10 @@ const translations = {
     'hero.chip3.text': 'AGPLv3',
     'header.language': 'DE',
     'hero.docs': 'Dokumentation',
-    'hero.bullet1': 'System- & Hardware-Infos (CPU/RAM/Disks/Sensoren)',
-    'hero.bullet2': 'Storage, Pools & Shares – zentral verwalten',
-    'hero.bullet3': 'Docker, LXC, VMs – separat aktivierbar',
-    'hero.bullet4': 'Benachrichtigungen in Echtzeit',
-    'hero.bullet5': 'Webterminal & Tools für schnelle Aktionen',
+    'hero.bullet1': 'Keine versteckten Services',
+    'hero.bullet2': 'Keine Telemetrie',
+    'hero.bullet3': 'Keine erzwungenen Cloud Services oder Abhängigkeiten',
+    'hero.bullet4': 'Funktionen können auf Wunsch mit Plugins aktiviert werden',
     'hero.screenshot.alt': 'MOS Web UI Screenshot',
 
     // Lightbox
@@ -301,11 +300,10 @@ const translations = {
     'hero.chip3.text': 'AGPLv3',
     'header.language': 'EN',
     'hero.docs': 'Documentation',
-    'hero.bullet1': 'System & hardware info (CPU/RAM/Disks/Sensors)',
-    'hero.bullet2': 'Storage, pools & shares – manage centrally',
-    'hero.bullet3': 'Docker, LXC, VMs – separately activatable',
-    'hero.bullet4': 'Real-time notifications',
-    'hero.bullet5': 'Web terminal & tools for quick actions',
+    'hero.bullet1': 'No hidden services',
+    'hero.bullet2': 'No telemetry',
+    'hero.bullet3': 'No forced cloud services or dependencies',
+    'hero.bullet4': 'Features can be enabled with plugins',
     'hero.screenshot.alt': 'MOS Web UI Screenshot',
 
     // Lightbox
