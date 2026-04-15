@@ -222,7 +222,8 @@ a:hover {
   background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 6%, transparent) 0%, color-mix(in srgb, var(--header-footer-bg) 70%, transparent) 60%);
   border-bottom: none;
   box-shadow: none;
-  overflow: visible;
+  /* Prevent decorative pseudo-elements from overlapping the page content */
+  overflow: hidden;
 }
 
 .site-header::after {
@@ -231,12 +232,12 @@ a:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -28px;
-  height: 48px;
+  bottom: 0;
+  height: 18px;
   pointer-events: none;
   /* NOTE: --page-bg is a gradient; use a real color stop here */
   background: linear-gradient(180deg, transparent, var(--bg2));
-  filter: blur(6px);
+  opacity: 0.7;
 }
 .header-inner {
   display: flex;
