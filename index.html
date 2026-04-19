@@ -36,7 +36,7 @@
       })();
     </script>
 
-    <link rel="stylesheet" href="./styles.css?v=2026-01-27" />
+    <link rel="stylesheet" href="./styles.css?v=2026-04-19-4" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <script src="./translations.js"></script>
     <script defer src="./script.js"></script>
@@ -45,6 +45,14 @@
     <a class="skip-link" href="#main" data-i18n="skipLink">Zum Inhalt springen</a>
 
     <header class="site-header" role="banner">
+      <div class="info-bar" role="note">
+        <div class="container info-bar__inner">
+          <p class="info-bar__text" data-i18n-html="announcement.arm64.html">
+            Neu: <strong>ARM64</strong> Build für MOS verfügbar. <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Zu den Releases</a>
+          </p>
+        </div>
+      </div>
+
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="MOS Start">
           <span class="brand-mark" aria-hidden="true">
@@ -272,7 +280,7 @@
           </div>
 
           <div class="grid highlights">
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/WebUI_Overview.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/Quick-Start/WebUI-Overview" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="9" />
@@ -282,7 +290,7 @@
               <h3 data-i18n="highlights.quickStart.title">Quick Start</h3>
               <p data-i18n="highlights.quickStart.text">WebUI‑Überblick, Netzwerkstart, erste Pools, erster Container, Shares.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/Installation/Create_Bootable_Media.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/Installation/Create-Bootable-Media" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M12 3v10" />
@@ -293,7 +301,7 @@
               <h3 data-i18n="highlights.installation.title">Installation</h3>
               <p data-i18n="highlights.installation.text">Boot‑Medium erstellen und loslegen. Changelog via Releases.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/System.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/System-Management/System-Configuration/System-Settings" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="3" />
@@ -303,7 +311,7 @@
               <h3 data-i18n="highlights.system.title">System</h3>
               <p data-i18n="highlights.system.text">Settings, Cron, Logs, Updates/Rollback, Tokens, HUB &amp; Notify.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/Quick_Start/Create_a_Storage_Pool.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/Quick-Start/Create-Storage-Pool" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <ellipse cx="12" cy="6" rx="7" ry="3" />
@@ -314,7 +322,7 @@
               <h3 data-i18n="highlights.storage.title">Storage</h3>
               <p data-i18n="highlights.storage.text">Pools, Filesystems, SMB/NFS‑Shares, Rechte und Attribute.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/Docker_service.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/Virtualization/Docker-Service" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <rect x="5" y="7" width="4" height="4" rx="0.5" />
@@ -327,7 +335,7 @@
               <h3 data-i18n="highlights.docker.title">Docker</h3>
               <p data-i18n="highlights.docker.text">Images/Container, Logs, Netzwerke, Volumes/Appdata, Compose.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/LXC_Service.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/Virtualization/LXC-Service" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M12 3l7 4v6l-7 4-7-4V7l7-4z" />
@@ -338,7 +346,7 @@
               <h3 data-i18n="highlights.lxc.title">LXC</h3>
               <p data-i18n="highlights.lxc.text">Container anlegen, Snapshots/Backups, Netzwerk &amp; Storage.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/System_Management/VM_service.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/Virtualization/VM-Service" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <rect x="4" y="5" width="16" height="11" rx="1.5" />
@@ -349,7 +357,7 @@
               <h3 data-i18n="highlights.vm.title">VM</h3>
               <p data-i18n="highlights.vm.text">CPUs/RAM, Netzwerke, Disks, GPU/USB‑Passthrough, Snapshots.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/User_&_Access_Management/Create_Users.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/User-Management/Users" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <circle cx="12" cy="9" r="3" />
@@ -359,7 +367,7 @@
               <h3 data-i18n="highlights.users.title">Users</h3>
               <p data-i18n="highlights.users.text">Benutzer erstellen, Rechte &amp; Rollen – sauber segmentiert.</p>
             </a>
-            <a class="card link" href="https://github.com/ich777/mos-docs/blob/master/API/API_Overview.md" target="_blank" rel="noopener">
+            <a class="card link" href="https://docs.mos-official.net/docs/API/MOS-API-Overview" target="_blank" rel="noopener">
               <div class="icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M8 6L4 12l4 6" />
@@ -543,6 +551,10 @@
               <p data-i18n-html="faq.what.text">
                 MOS ist eine webbasierte Verwaltungsoberfläche für Server/Systeme: Monitoring, Storage, Benutzerverwaltung, Services, Container/VMs, Notifications und Tools – als Client zur MOS-API.
               </p>
+            </details>
+            <details>
+              <summary data-i18n="faq.arm64.title">Gibt es einen ARM64 Build?</summary>
+              <p data-i18n="faq.arm64.text">Ja — ARM64 Builds sind verfügbar, aber aktuell noch experimentell.</p>
             </details>
             <details>
               <summary data-i18n="faq.services.title">Welche Dienste und Plattformen werden unterstützt?</summary>

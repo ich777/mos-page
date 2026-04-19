@@ -219,7 +219,7 @@ a:hover {
   /* Softer blend into the page: remove hard border/shadow and add a gentle fade */
   -webkit-backdrop-filter: blur(6px) saturate(110%);
   backdrop-filter: blur(6px) saturate(110%);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--primary) 6%, transparent) 0%, color-mix(in srgb, var(--header-footer-bg) 70%, transparent) 60%);
+  background: color-mix(in srgb, var(--header-footer-bg) 82%, transparent);
   border-bottom: none;
   box-shadow: none;
   /* Prevent decorative pseudo-elements from overlapping the page content */
@@ -227,25 +227,62 @@ a:hover {
 }
 
 .site-header::after {
-  /* subtle gradient to smoothly blend header into page background */
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 18px;
-  pointer-events: none;
-  /* NOTE: --page-bg is a gradient; use a real color stop here */
-  background: linear-gradient(180deg, transparent, var(--bg2));
-  opacity: 0.7;
+  content: none;
 }
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  min-height: 72px;
   padding: 0.9rem 0;
   flex-wrap: nowrap;
+}
+
+.info-bar {
+  border-bottom: 1px solid color-mix(in srgb, #febc2e 55%, var(--border));
+  background: #febc2e;
+}
+
+.info-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0;
+  text-align: center;
+}
+
+.info-bar__text {
+  margin: 0;
+  color: rgba(18, 18, 18, 0.92);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .info-bar__inner {
+    padding: 0.5rem 0;
+  }
+
+  .info-bar__text {
+    font-size: 0.92rem;
+  }
+}
+
+.info-bar__text strong {
+  font-weight: 800;
+}
+
+.info-bar__text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.info-bar__text a:hover {
+  text-decoration-thickness: 2px;
 }
 
 .brand {
@@ -760,6 +797,8 @@ code {
   }
   .header-inner {
     gap: 0.6rem;
+    min-height: 68px;
+    padding: 0.8rem 0;
   }
   .site-header .header-actions .btn {
     padding: 0.48rem 0.68rem;
