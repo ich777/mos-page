@@ -1,5 +1,6 @@
 (function () {
   const storageKey = 'mos-landing-theme';
+  const infoBarStorageKey = 'mos-info-bar-dismissed';
 
   const base = (document.baseURI || window.location.href || '').endsWith('/')
     ? (document.baseURI || window.location.href)
@@ -71,8 +72,21 @@
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  function closeInfoBar(saveState = true) {
+    const infoBar = document.querySelector('[data-dismissible-info-bar]');
+    if (!infoBar) return;
+    infoBar.classList.add('is-hidden');
+    if (saveState) {
+      localStorage.setItem(infoBarStorageKey, '1');
+    }
+  }
+
   // Init
   applyTheme(getPreferredTheme());
+
+  if (localStorage.getItem(infoBarStorageKey) === '1') {
+    closeInfoBar(false);
+  }
 
   // Auf System-Theme-Änderungen reagieren (wenn keine gespeicherte Präferenz vorhanden ist)
   if (window.matchMedia) {
@@ -122,6 +136,12 @@
     if (action === 'toggle-language') {
       e.preventDefault();
       toggleLanguage();
+      return;
+    }
+
+    if (action === 'close-info-bar') {
+      e.preventDefault();
+      closeInfoBar(true);
       return;
     }
 

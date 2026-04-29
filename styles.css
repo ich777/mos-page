@@ -244,10 +244,15 @@ a:hover {
   background: #febc2e;
 }
 
+.info-bar.is-hidden {
+  display: none;
+}
+
 .info-bar__inner {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
   padding: 0.55rem 0;
   text-align: center;
 }
@@ -258,6 +263,33 @@ a:hover {
   font-size: 0.95rem;
   line-height: 1.35;
   min-width: 0;
+  flex: 1;
+}
+
+.info-bar__close {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border: 1px solid rgba(18, 18, 18, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(18, 18, 18, 0.58);
+  font-size: 0.82rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.info-bar__close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: rgba(18, 18, 18, 0.78);
+}
+
+.info-bar__close:focus-visible {
+  outline: 2px solid rgba(18, 18, 18, 0.75);
+  outline-offset: 2px;
 }
 
 @media (max-width: 760px) {

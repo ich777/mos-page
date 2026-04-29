@@ -45,11 +45,14 @@
     <a class="skip-link" href="#main" data-i18n="skipLink">Zum Inhalt springen</a>
 
     <header class="site-header" role="banner">
-      <div class="info-bar" role="note">
+      <div class="info-bar" role="note" data-dismissible-info-bar>
         <div class="container info-bar__inner">
           <p class="info-bar__text" data-i18n-html="announcement.arm64.html">
             Neu: <strong>ARM64</strong> Build für MOS verfügbar. <a href="https://github.com/ich777/mos-releases/releases" target="_blank" rel="noopener">Zu den Releases</a>
           </p>
+          <button class="info-bar__close" type="button" data-action="close-info-bar" aria-label="Hinweis schließen" title="Schließen">
+            <span aria-hidden="true">✕</span>
+          </button>
         </div>
       </div>
 
