@@ -80,7 +80,7 @@
           <a class="nav-link" href="#api" data-i18n="nav.api">API</a>
           <a class="nav-link" href="#opensource" data-i18n="nav.opensource">Open Source</a>
           <a class="nav-link" href="#usecases" data-i18n="nav.usecases">Use Cases</a>
-          <a class="nav-link" href="#security" data-i18n="nav.security">Security</a>
+          <a class="nav-link" href="#partners" data-i18n="nav.partners">Partners</a>
           <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
         </nav>
 
@@ -519,25 +519,44 @@
         </div>
       </section>
 
-      <section id="security" class="section">
+      <section id="partners" class="section">
         <div class="container">
           <div class="section-head">
-            <h2 data-i18n="section.security.title">Security & Zugriff</h2>
+            <h2 data-i18n="section.partners.title">Partners</h2>
+            <p class="muted" data-i18n="section.partners.subtitle">Projektpartner und unterstützende Organisationen</p>
           </div>
 
-          <div class="grid three">
-            <div class="panel">
-              <h3 data-i18n="security.auth.title">Auth</h3>
-              <p data-i18n="security.auth.text">Login-Flow mit Token-basiertem Zugriff (ideal hinter HTTPS / Reverse Proxy).</p>
+          <div class="carousel-wrapper">
+            <div class="carousel" role="region" aria-label="Partner-Logos">
+              <div class="carousel-container">
+                <div class="carousel-item">
+                  <img 
+                    src="./assets/devuan-logo.png" 
+                    alt="Devuan Logo" 
+                    width="200" 
+                    height="200"
+                    decoding="async"
+                  />
+                  <p class="carousel-label" data-i18n="partners.devuan">Devuan</p>
+                </div>
+                <div class="carousel-item">
+                  <img 
+                    src="./assets/weblate-logo.png" 
+                    alt="Weblate Logo" 
+                    width="200" 
+                    height="200"
+                    decoding="async"
+                  />
+                  <p class="carousel-label" data-i18n="partners.weblate">Weblate</p>
+                </div>
+              </div>
             </div>
-            <div class="panel">
-              <h3 data-i18n="security.privilege.title">Least Privilege</h3>
-              <p data-i18n="security.privilege.text">Nur das freigeben, was benötigt wird; API-Zugriffe sauber segmentieren.</p>
-            </div>
-            <div class="panel">
-              <h3 data-i18n="security.updates.title">Updates</h3>
-              <p data-i18n="security.updates.text">Regelmäßig aktualisieren und Logs/Benachrichtigungen ernst nehmen.</p>
-            </div>
+            <button class="carousel-btn carousel-btn--prev" data-action="carousel-prev" aria-label="Vorheriges Partner-Logo">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button class="carousel-btn carousel-btn--next" data-action="carousel-next" aria-label="Nächstes Partner-Logo">
+              <span aria-hidden="true">›</span>
+            </button>
           </div>
         </div>
       </section>

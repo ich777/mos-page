@@ -47,7 +47,7 @@ const translations = {
     'nav.api': 'API',
     'nav.opensource': 'Open Source',
     'nav.usecases': 'Use Cases',
-    'nav.security': 'Security',
+    'nav.partners': 'Partners',
     'nav.faq': 'FAQ',
 
     // Header
@@ -130,13 +130,11 @@ const translations = {
     'usecases.dev.item2': 'Webterminal für schnelle Checks',
     'usecases.dev.item3': 'Plugins für projektspezifische Aufgaben',
 
-    // Security
-    'security.auth.title': 'Auth',
-    'security.auth.text': 'Login-Flow mit Token-basiertem Zugriff (ideal hinter HTTPS / Reverse Proxy).',
-    'security.privilege.title': 'Least Privilege',
-    'security.privilege.text': 'Nur das freigeben, was benötigt wird; API-Zugriffe sauber segmentieren.',
-    'security.updates.title': 'Updates',
-    'security.updates.text': 'Regelmäßig aktualisieren und Logs/Benachrichtigungen ernst nehmen.',
+    // Partners
+    'section.partners.title': 'Partners',
+    'section.partners.subtitle': 'Projektpartner und unterstützende Organisationen',
+    'partners.devuan': 'Devuan',
+    'partners.weblate': 'Weblate',
 
     // FAQ
     'faq.what.title': 'Was ist MOS?',
@@ -281,7 +279,7 @@ const translations = {
     'nav.api': 'API',
     'nav.opensource': 'Open Source',
     'nav.usecases': 'Use Cases',
-    'nav.security': 'Security',
+    'nav.partners': 'Partners',
     'nav.faq': 'FAQ',
 
     // Header
@@ -364,13 +362,11 @@ const translations = {
     'usecases.dev.item2': 'Web terminal for quick checks',
     'usecases.dev.item3': 'Plugins for project-specific tasks',
 
-    // Security
-    'security.auth.title': 'Auth',
-    'security.auth.text': 'Login flow with token-based access (ideal behind HTTPS / reverse proxy).',
-    'security.privilege.title': 'Least Privilege',
-    'security.privilege.text': 'Only release what is needed; cleanly segment API access.',
-    'security.updates.title': 'Updates',
-    'security.updates.text': 'Update regularly and take logs/notifications seriously.',
+    // Partners
+    'section.partners.title': 'Partners',
+    'section.partners.subtitle': 'Project partners and supporting organizations',
+    'partners.devuan': 'Devuan',
+    'partners.weblate': 'Weblate',
 
     // FAQ
     'faq.what.title': 'What is MOS?',
