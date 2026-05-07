@@ -263,6 +263,9 @@ const translations = {
     'social.x.label': 'X',
     'social.x.title': 'X öffnen',
     'social.x.ariaLabel': 'X öffnen (neuer Tab)',
+    'social.matrix.label': 'Matrix',
+    'social.matrix.title': 'Matrix öffnen',
+    'social.matrix.ariaLabel': 'Matrix öffnen (neuer Tab)',
   },
   en: {
     // Meta
@@ -492,6 +495,9 @@ const translations = {
     'social.x.label': 'X',
     'social.x.title': 'Open X',
     'social.x.ariaLabel': 'Open X (new tab)',
+    'social.matrix.label': 'Matrix',
+    'social.matrix.title': 'Open Matrix',
+    'social.matrix.ariaLabel': 'Open Matrix (new tab)',
   },
 };
 
